@@ -1,0 +1,335 @@
+\chapter{Web Sem\^{a}ntica}\label{capitulo2}
+A Web Sem\^{a}ntica \'{e} uma extens\~{a}o da web j\'{a} existente, onde a informa\c{c}\~{a}o ganha melhores significados, proporcionando aos humanos trabalhar melhor em conjunto com os computadores \cite{BernersLee2001}. 
+Verifica-se, que desde o projeto de Tim Berners-Lee quando inventou a WWW em 1989 \cite{Berners-Lee1989}, existia a preocupa\c{c}\~{a}o de que ela pudesse ser compreendida tanto por humanos quanto por agentes inteligentes \cite{Fensel2003}. Novamente sua import\^{a}ncia foi mostrada ao p\'{u}blico por Tim Berners-Lee durante a primeira confer\^{e}ncia da \textit{World Wide Web} em 1994 \cite{Shadbolt2006}. Entretanto, somente em 2001 surgiu a primeira publica\c{c}\~{a}o espec\'{\i}fica sobre o assunto. Em um artigo, tamb\'{e}m escrito por Tim Berners-Lee na revista \textit{Scientific American}, foi abordado um novo mundo de possibilidades na web, que at\'{e} o momento eram desejadas, mas tidas como invi\'{a}veis \cite{BernersLee2001}.
+
+Atrav\'{e}s da Web Sem\^{a}ntica, de modo geral, dever\'{a} ser poss\'{\i}vel localizar dados em qualquer lugar, tornando-os acess\'{\i}veis e compreens\'{\i}veis, tanto a computadores quanto a m\'{a}quinas \cite{Passin2004}, o que resgata a parte n\~{a}o implementada do projeto original \cite{Fensel2003}. Desde o surgimento da Web, o caminho para Web Sem\^{a}ntica veio sendo pavimentado ao longo dos anos. Ao ter seu grupo de trabalho oficializado no W3C em 2001, a web sem\^{a}ntica j\'{a} possu\'{\i}a uma base de tecnologias dispon\'{\i}veis para seu desenvolvimento: XML e \sigla{RDF}{Resource Description Framework}RDF \cite{BernersLee2001}.
+
+\section{Faces da Web Sem\^{a}ntica}
+\'{E} poss\'{\i}vel encarar a Web Sem\^{a}ntica atrav\'{e}s de diversas perspectivas, devido \`{a}s suas diversas possibilidades. Podemos encar\'{a}-la como \cite{Passin2004}:
+\begin{itemize}
+ \item Vis\~{a}o dos dados compreens\'{\i}veis por m\'{a}quinas: a web sem\^{a}ntica \'{e} uma vis\~{a}o, da id\'{e}ia de ter dados na web definidos e associados de maneira que possam ser utilizados por m\'{a}quinas e n\~{a}o apenas para fins de apresenta\c{c}\~{a}o, mas tamb\'{e}m automa\c{c}\~{a}o, integra\c{c}\~{a}o e reutiliza\c{c}\~{a}o de dados entre v\'{a}rias aplica\c{c}\~{o}es;
+ \item Vis\~{a}o de sistemas inteligentes: fazer com que a web atual seja mais compreens\'{\i}vel por m\'{a}quinas, permitindo a agentes inteligentes recuperar e manipular informa\c{c}\~{a}o pertinente;
+ \item Vis\~{a}o de bancos de dados distribu\'{\i}dos: transformar o processamento de informa\c{c}\~{a}o provendo um meio comum para acesso dos dados, interligados juntos e compreens\'{\i}veis. Para transformar a web de um grande livro ligado em um grande banco de dados ligado;
+ \item Vis\~{a}o de infra estrutura automatizada: visto que ela n\~{a}o \'{e} uma aplica\c{c}\~{a}o, mas sim uma infra-estrutura para elas;
+ \item Vis\~{a}o de servo da humanidade: permitir aos computadores livrar-nos da carga de localizar recursos na Web que s\~{a}o relevantes para nossas necessidades e, ent\~{a}o, extrair, integrar e indexar a informa\c{c}\~{a}o;
+ \item Vis\~{a}o de melhores metadados: suprir a web que conhecemos atualmente com anota\c{c}\~{o}es expressas de uma forma process\'{a}vel por m\'{a}quinas e interligadas;
+ \item Vis\~{a}o de melhores buscas: acessar recursos web pelo seu conte\'{u}do, e n\~{a}o apenas por palavras-chave;
+ \item Vis\~{a}o de \textit{web services}: n\~{a}o fornecer apenas documentos com informa\c{c}\~{o}es \'{u}teis, mas tamb\'{e}m servi\c{c}os que tenham comportamento adequado.
+\end{itemize}
+
+Cada uma dessas perspectivas possui aplica\c{c}\~{o}es em diversos ramos, facilitando ou melhorando resultados de tarefas realizadas atualmente. Al\'{e}m disso, novas perspectivas podem ser vislumbradas. Um exemplo cl\'{a}ssico do que a web sem\^{a}ntica \'{e} capaz de realizar pode ser exemplificado atrav\'{e}s dos motores de busca. As buscas tradicionais, realizadas atualmente, trazem seus resultados baseados em palavras chave fornecidas pelo usu\'{a}rio, ficando a cargo deste realizar a filtragem da informa\c{c}\~{a}o, verificando se ela realmente atende suas necessidades. Atrav\'{e}s de uma pesquisa com motores sem\^{a}nticos, \'{e} poss\'{\i}vel realizar uma pergunta ao motor de busca que, compreendendo a sem\^{a}ntica de cada conceito, suas rela\c{c}\~{o}es e combinando-os, interpreta o significado da pergunta e busca a reposta mais efetiva poss\'{\i}vel \cite{Feigenbaum2007}, como dispon\'{\i}vel na ferramenta de busca True Knowledge\footnote{http://www.trueknowledge.com/}. A utiliza\c{c}\~{a}o de tecnologias de Web Sem\^{a}ntica est\'{a} se difundindo, e sendo adotada como diferencial mercadol\'{o}gico, como no caso do Yahoo! que anunciou a integra\c{c}\~{a}o de sem\^{a}ntica a suas buscas\footnote{http://www.ysearchblog.com/archives/000527.html}.
+
+Apesar dos casos de sucesso e de todo potencial que possui, a Web Sem\^{a}ntica n\~{a}o ser\'{a} algo vis\'{\i}vel aos usu\'{a}rios. Isso se deve ao fato dela ser uma camada adicional integrada que melhora a web atual \cite{Feigenbaum2007}. A intera\c{c}\~{a}o do usu\'{a}rio com funcionalidades sem\^{a}nticas ser\'{a} totalmente transparente, auxiliando inclusive na utiliza\c{c}\~{a}o dos sistemas.
+
+\section{Problemas que a Web Sem\^{a}ntica pode resolver}
+Atrav\'{e}s da web, novas possibilidades de acesso a informa\c{c}\~{a}o e com\'{e}rcio eletr\^{o}nico surgiram, o que se deve principalmente \`{a} sua simplicidade. Entretanto, a mesma facilidade impede um crescimento ainda maior.
+A \'{a}rea de representa\c{c}\~{a}o de conhecimento, por exemplo, devido \`{a} globaliza\c{c}\~{a}o geogr\'{a}fica de organiza\c{c}\~{o}es, centraliza documentos na web. Para esse campo \'{e} poss\'{\i}vel fornecer defini\c{c}\~{o}es estruturais e sem\^{a}nticas de documentos que permitir\~{a}o possibilidades completamente novas: buscas inteligentes, ao inv\'{e}s de busca por palavras-chave, busca por perguntas ao inv\'{e}s de recupera\c{c}\~{a}o de informa\c{c}\~{a}o, troca de documentos entre departamentos atrav\'{e}s de mapeamentos de ontologias, como visto na se\c{c}\~{a}o \ref{ontology_languages}, e defini\c{c}\~{a}o de vis\~{o}es customizadas de documentos \cite{Fensel2003}.
+
+Para \'{a}rea do com\'{e}rcio eletr\^{o}nico, a web representa uma extens\~{a}o de seus modelos de neg\'{o}cios, reduzindo custos e estendendo os canais de distribui\c{c}\~{a}o existentes e traz, em alguns casos, novas possibilidades de distribui\c{c}\~{a}o. Tamb\'{e}m consegue fornecer modelos de neg\'{o}cio completamente novos, ou dar mais import\^{a}ncia do que possu\'{\i}am sem sem\^{a}ntica associada. Atualmente, temos dispon\'{\i}veis os servi\c{c}os de agregadores de com\'{e}rio eletr\^{o}nico, que buscam informa\c{c}\~{o}es sobre determinado produto em lojas pr\'{e}-determinadas. Apesar de n\~{a}o utilizarem somente a busca por palavra-chave, essa tecnologia possui algumas limita\c{c}\~{o}es. O esfor\c{c}o de implementa\c{c}\~{a}o para desenvolver uma ferramenta desse tipo \'{e} muito grande, e qualquer mudan\c{c}a no \textit{layout} de uma loja assistida consome grande tempo de manuten\c{c}\~{a}o. A qualidade da informa\c{c}\~{a}o extra\'{\i}da n\~{a}o \'{e} das melhores, limitada normalmente a uma terminologia, pass\'{\i}vel de erros e incompleta. Para solucionar esses tipos de problema seriam necess\'{a}rias sem\^{a}nticas process\'{a}veis por m\'{a}quinas para a informa\c{c}\~{a}o fornecida. A programa\c{c}\~{a}o em baixo n\'{\i}vel desses rob\^{o}s baseados em extra\c{c}\~{a}o de texto ser\'{a} substitu\'{\i}da por mapeamentos sem\^{a}nticos que traduzem diferentes formatos utilizados para representar produtos e poder\~{a}o ser utilizadas para navegar e encontrar automaticamente a informa\c{c}\~{a}o requerida \cite{Breitman2005}.
+
+O com\'{e}rcio entre empresas tamb\'{e}m se beneficiar\'{a}. Para que as transa\c{c}\~{o}es sejam realizadas entre as empresas, \'{e} necess\'{a}rio que elas entrem em acordo para utiliza\c{c}\~{a}o de um padr\~{a}o de troca de informa\c{c}\~{o}es. Com o surgimento do XML, isso se tornou mais simples atrav\'{e}s da web, entretanto ele n\~{a}o fornece estruturas de dados e terminologias padr\~{a}o para descrever processos de neg\'{o}cio e troca de produtos. A tecnologia da Web Sem\^{a}ntica ir\'{a} ocupar pap\'{e}is importantes no com\'{e}rcio eletr\^{o}nico em XML. Linguagens com modelos de dados melhores definidos permitir\~{a}o defini\c{c}\~{a}o, mapeamento e troca de dados de produtos, ontologias cobrir\~{a}o v\'{a}rias \'{a}reas de neg\'{o}cio, tradu\c{c}\~{o}es eficientes de servi\c{c}os ser\~{a}o necess\'{a}rias em \'{a}reas em que tecnologias padr\~{a}o n\~{a}o existem. Esse servi\c{c}o de tradu\c{c}\~{a}o cobrir\'{a} diferen\c{c}as sem\^{a}nticas estruturais e de linguagem \cite{Fensel2003}.
+
+\section{Esclarecimentos sobre o conceito}
+Devido a algumas de suas caracter\'{\i}ticas, \'{e} poss\'{\i}vel inferir dados sobre a Web Sem\^{a}ntica que n\~{a}o traduzem a sua realidade.
+
+Um dos mais comuns \'{e} pensar que a Web Sem\^{a}ntica \'{e} uma Web separada, o que aconteceu similarmente com a chamada Web 2.0. Assim como a Web 2.0, a Web Sem\^{a}ntica ser\'{a} uma extens\~{a}o da Web atual, onde a informa\c{c}\~{a}o ter\'{a} significado definido atrav\'{e}s de linguagens de marca\c{c}\~{a}o sem\^{a}ntica. Essas linguagens ser\~{a}o acrescentadas \`{a}s p\'{a}ginas atuais, segundo uma arquitetura definida \cite{Breitman2005}. Entretanto, esses recursos ser\~{a}o praticamente invis\'{\i}veis aos usu\'{a}rios, que sentir\~{a}o somente seus efeitos, trabalhando melhor em conjunto com os computadores, um dos objetivos de seu projeto \cite{BernersLee2001}.
+
+Outro erro comum \'{e} pensar que a Web Sem\^{a}ntica \'{e} \sigla{IA}{Intelig\^{e}ncia Artificial}Intelig\^{e}ncia Artificial (IA). Isso \'{e} tido como falso j\'{a} no projeto da Web Sem\^{a}ntica, em um dos casos de uso citados no artigo de Tim Berners-Lee \cite{BernersLee2001}. Nele, um agente que visita p\'{a}ginas e traz informa\c{c}\~{o}es atrav\'{e}s de infer\^{e}ncia, n\~{a}o fazendo a utiliza\c{c}\~{a}o de Intelig\^{e}ncia Artificial, mas apenas atrav\'{e}s da utiliza\c{c}\~{a}o da sem\^{a}ntica fornecida corretamente na p\'{a}gina \cite{BernersLee2001}. N\~{a}o \'{e} necess\'{a}rio que os computadores passem a entender a linguagem das pessoas, as pessoas que dever\~{a}o realizar o esfor\c{c}o de codificar a informa\c{c}\~{a}o em representa\c{c}\~{o}es onde seja poss\'{\i}vel o processamento autom\'{a}tico \cite{Breitman2005}. Esse pensamento talvez seja em decorr\^{e}ncia da necessidade de utiliza\c{c}\~{a}o de t\'{e}cnicas e ferramentas derivadas dos 50 anos de pesquisa da Intelig\^{e}ncia Artificial na Web Sem\^{a}ntica \cite{Shadbolt2006}. Apesar disso, n\~{a}o ser\'{a} necess\'{a}rio o mesmo n\'{\i}vel de intelig\^{e}ncia desejado pelos pesquisadores de IA, visto que a Web Sem\^{a}ntica pretende auxiliar humanos, n\~{a}o super\'{a}-los.
+
+Mas afinal, o que \'{e} a Web Sem\^{a}ntica?
+Podemos buscar diversas defini\c{c}\~{o}es para a Web Sem\^{a}ntica, pois, como j\'{a} abordado anteriormente, ela pode variar conforme o foco tido como objetivo. Dentre as v\'{a}rias defini\c{c}\~{o}es que se pode assumir, a que mais possui embasamento \'{e} a de seu precursor, Tim Berners-Lee. Para ele, a Web Sem\^{a}ntica ir\'{a} envolver a web atual, fazendo com que informa\c{c}\~{o}es e servi\c{c}os sejam compreendidos por humanos e m\'{a}quinas \cite{BernersLee2001}, ou criar uma Web para as m\'{a}quinas \cite{Globe2003}.
+
+Para que ela seja poss\'{\i}vel, alguns requisitos devem ser atendidos.
+\begin{itemize}
+ \item Desenvolvimento de linguagens para expressar meta-informa\c{c}\~{a}o de maneira compreens\'{\i}vel por m\'{a}quinas, desenvolver terminologias utilizando essas linguagens e disponibiliz\'{a}-las na web;
+ \item Desenvolver ferramentas e novas arquiteturas que usem essas linguagens e terminologias provendo suporte na localiza\c{c}\~{a}o, acesso, apresenta\c{c}\~{a}o e manuten\c{c}\~{a}o das origens de informa\c{c}\~{a}o.
+\end{itemize}
+
+\subsection{Estrutura da Web Sem\^{a}ntica}
+
+Visto que a web dever\'{a} ser estendida pela Web Sem\^{a}ntica, \'{e} importante que seu projeto e arquitetura sejam compat\'{\i}veis com a estrutura atual da web. A web \'{e} projetada sobre recursos, endere\c{c}os padronizados desses recursos e uma pequena quantidade de comandos amplamente compreendidos. Tamb\'{e}m faz parte de seu projeto que funcione em redes de maneira descentralizada.
+
+Um recurso representa qualquer id\'{e}ia que possa ser referenciada. Sua no\c{c}\~{a}o \'{e} flex\'{\i}vel o bastante para atingir qualquer tipo de recurso. Um recurso pode mudar durante o tempo e ainda assim \'{e} considerado o mesmo recurso, endere\c{c}ado pela mesma URI. Alternativamente, uma URI pode apontar para uma vers\~{a}o espec\'{\i}fica do mesmo documento que nunca muda. Um recurso nunca \'{e} acessado diretamente, mas apenas a sua representa\c{c}\~{a}o. Por fim, um recurso pode ser algo que nem exista, uma refer\^{e}ncia a algo fict\'{\i}cio. Tudo isso pode ser identificado como um recurso, atrav\'{e}s de uma URI na Web Sem\^{a}ntica. Padroniza\c{c}\~{a}o desse endere\c{c}amento \'{e} necess\'{a}ria, de maneira que qualquer informa\c{c}\~{a}o que possua uma URI possa ser colocada em um \textit{hyperlink} e ser associada.
+
+O protocolo HTTP utiliza um conjunto pequeno de instru\c{c}\~{o}es, conhecidos universalmente por servidores web, agentes de usu\'{a}rio e componentes intermedi\'{a}rios. Ainda \'{e} uma quest\~{a}o aberta se a Web Sem\^{a}ntica dever\'{a} se restringir a apenas esse pequeno conjunto de instru\c{c}\~{o}es, presente na arquitetura atual da web.
+
+A Web precisa operar em uma grande rede com uma grande quantidade de \textit{web sites}, e conforme o crescimento da rede, deve continuar operando. Isso se deve primeiro \`{a} sua descentraliza\c{c}\~{a}o e segundo, pelo fato de cada transa\c{c}\~{a}o possuir todos os dados necess\'{a}rios para que seja completada. Nenhum dado deve ser guardado no servidor de uma requisi\c{c}\~{a}o para outra, por isso as transa\c{c}\~{o}es na web s\~{a}o consideradas \textit{stateless}.
+
+Visto que a web n\~{a}o possui controles centrais, \'{e} considerada aberta. Ela \'{e} incompleta pois nada pode garantir que todo link ir\'{a} funcionar ou que toda a informa\c{c}\~{a}o estar\'{a} dispon\'{\i}vel. Tamb\'{e}m \'{e} inconsistente, visto que qualquer um pode publicar qualquer coisa em uma p\'{a}gina web, o que facilmente gera contradi\c{c}\~{o}es entre diferentes p\'{a}ginas.
+
+A partir dessas caracter\'{\i}sticas estruturais da web \'{e} que surgir\'{a} a Web Sem\^{a}ntica. Os aspectos que ela deve seguir s\~{a}o \cite{BernersLee2001}, \cite{Passin2004}, \cite{Shadbolt2006}, \cite{Koivunen2001}:
+\begin{itemize}
+ \item Utilizar o endere\c{c}amento baseado em URL; \sigla{URL}{Uniform Resource Locator}
+ \item Possuir no\c{c}\~{o}es de recursos endere\c{c}\'{a}veis e n\~{a}o endere\c{c}\'{a}veis;
+ \item Utilizar protocolos com um conjunto de comandos pequeno e universalmente conhecidos;
+ \item Manter o atributo de \textit{stateless};
+ \item Ser o mais descentralizada poss\'{\i}vel;
+ \item Funcionar em larga escala;
+ \item Permitir \textit{cache} local de informa\c{c}\~{o}es diminuindo a carga do servidor e reduzindo custos de rede;
+ \item Ser capaz de operar com \textit{links} perdidos ou informa\c{c}\~{a}o inconsistente.
+\end{itemize}
+
+Complementando, tamb\'{e}m \'{e} necess\'{a}rio que tanto recursos quanto \textit{links} tenham tipos, de maneira que uma m\'{a}quina possa compreender. Essa necessidade \'{e} bem exemplificada pela figura \ref{fig:sw_links}.
+
+\begin{figure}[htb!]
+    \centering
+    \includegraphics[scale=0.6]{./figuras/current-vs-sw_adaptado.png}
+    \caption{Recursos e links com tipos na Web Sem\^{a}ntica (Adapta\c{c}\~{a}o de \cite{Koivunen2001})}
+    \label{fig:sw_links}
+\end{figure}
+Note que esse \'{e} um dos requisitos pensados no projeto da web \cite{Berners-Lee1989}.
+
+Todos esses princ\'{\i}pios fazem parte das camadas da Web Sem\^{a}ntica, que pode ser vista na se\c{c}\~{a}o \ref{layercake}.
+
+\subsection{As Camadas de bolo da Web Sem\^{a}ntica}\label{layercake}
+Proposta por Tim Berners-Lee durante a confer\^{e}ncia de XML de 2000, a arquitetura em camadas da Web Sem\^{a}ntica tamb\'{e}m \'{e} conhecida como ``Camadas do Bolo da Web Sem\^{a}ntica'' \cite{Breitman2005}. A id\'{e}ia por tr\'{a}s desse modelo \'{e} ao inv\'{e}s de propor uma arquitetura totalmente nova para a Web, utilizar a j\'{a} existente e construir a Web Sem\^{a}ntica em cima do que j\'{a} existe. Todos os princ\'{\i}pios de Web Sem\^{a}ntica s\~{a}o implementados nessas camadas de tecnologias Web e padr\~{o}es \cite{Koivunen2001}, conforme ilustrado pela figura \ref{fig:layerCake}.
+
+\begin{figure}[htb!]
+    \centering
+    \includegraphics[scale=0.8]{./figuras/layerCake_adaptado.png}
+    \caption{``Camadas do bolo da Web Sem\^{a}ntica'' (Adapta\c{c}\~{a}o de \cite{LayerCake})}
+    \label{fig:layerCake}
+\end{figure}
+Construir sobre o que j\'{a} existia era preciso, pois uma quebra com a arquitetura passada seria uma mudan\c{c}a muito dr\'{a}stica, devido \`{a} grande quantidade de p\'{a}ginas existentes. Modelar em pequenas camadas era necess\'{a}rio, pois pequenas mudan\c{c}as alcan\c{c}am consenso mais rapidamente \cite{Breitman2005}.
+
+As diferentes camadas est\~{a}o em est\'{a}gios de evolu\c{c}\~{a}o distintos, mas progridem rapidamente. Tal progresso \'{e} mensurado numa escala que come\c{c}a com a concep\c{c}\~{a}o de uma id\'{e}ia, trabalhando para sua aceita\c{c}\~{a}o como uma tecnologia comum e torna-se um padr\~{a}o interoper\'{a}vel, terminando com o mercado global baseando-se nela \cite{Fensel2003}. Cada camada \'{e} vista como constru\c{c}\~{a}o da camada anterior, sendo cada camada progressivamente mais especializada e complexa que as abaixo dela. Uma camada de baixo n\~{a}o \'{e} dependente de nenhuma camada acima, por isso, as camadas podem se desenvolver e operar independentemente \cite{Passin2004}. Visto que a Web Sem\^{a}ntica ainda n\~{a}o possui todos os seus padr\~{o}es e tecnologias estabelecidos, essa vis\~{a}o mudou e continua mudando constantemente. A vers\~{a}o mais atual do Grupo de Trabalho da Web Sem\^{a}ntica\footnote{http://www.w3.org/2001/sw/} no W3C pode ser conferida em\cite{LayerCake}.
+
+Em vers\~{o}es anteriores, o HTML aparecia explicitamente como a primeira camada. Devido \`{a} sua simplicidade, ele originou a necessidade do desenvolvimento de linguagens mais sofisticadas, pois ele descreve apenas unidades gen\'{e}ricas e sua ordem, o que tem extremo sucesso apenas quando a informa\c{c}\~{a}o \'{e} destinada apenas a pessoas. Com XML, \'{e} poss\'{\i}vel descrever a estrutura da informa\c{c}\~{a}o de outras maneiras, escolhendo o tipo de estrutura mais apropriada para uma informa\c{c}\~{a}o em particular. Por esse motivo, o XML \'{e} tido como a camada de funda\c{c}\~{a}o da Web Sem\^{a}ntica.
+O XML Schema fornece a habilidade de especificar estruturas e tipos de dados a serem usados por um documento XML particular \cite{Passin2004}.
+
+Na pr\'{o}xima camada encontra-se o \textit{Resource Description Framework} (RDF), que tem o papel de fornecer um modelo formal de dados e sintaxe para codificar metadados para serem processados por m\'{a}quinas. O princ\'{\i}pio do RDF \'{e} fornecer interoperabilidade entre aplicativos que trocam informa\c{c}\~{o}es na rede \cite{Breitman2005}. Para isso, ele define os significados em dois n\'{\i}veis: atribuindo propriedades e rela\c{c}\~{o}es entre elas. O RDF Schema descreve essas propriedades, o que s\~{a}o, a quais recursos elas podem estar atribu\'{\i}das, entre outros.
+
+A camada de ontologia leva esse passo mais al\'{e}m: n\~{a}o apenas realiza a descri\c{c}\~{a}o de propriedades e termos que podem ser usados mas tamb\'{e}m descrevem os relacionamentos entre elas. Essa camada e a camada anterior s\~{a}o utilizadas para descrever ou representar conhecimento \cite{Passin2004}. Tamb\'{e}m \'{e} a camada mais pesquisada dentre as outras \cite{Freitas2003}.
+
+A camada \sigla{SPARQL}{Simple Protocol and RDF Query Language}\textit{Simple Protocol and RDF Query Language} (SPARQL) pode ser usada para fazer buscas entre diversas origens de dados, se os dados estiverem guardados nativamente em RDF ou vistos como RDF atrav\'{e}s de um \textit{middleware}. Possui capacidade de buscar por padr\~{o}es de grafos obrigat\'{o}rios e opcionais juntamente com suas conjun\c{c}\~{o}es e disjun\c{c}\~{o}es \cite{SPARQLQuery}.
+
+A camada \sigla{RIF}{Rule Interchange Format}\textit{Rule Interchange Format} (RIF) permite a cria\c{c}\~{a}o de regras que podem ser utilizadas em diversos sistemas. Funciona como uma interl\'{\i}ngua que estabele uma nova regra de idioma que pode ser mapeada, permitindo que as regras de uma aplica\c{c}\~{a}o sejam publicadas, compartilhadas e reutilizadas em outras aplica\c{c}\~{o}es e motores de regra \cite{RIF}.
+
+A camada de l\'{o}gica permite escrever regras enquanto a camada de prova executa as regras e as avalia em conjunto com o mecanismo da camada de confian\c{c}a para aplica\c{c}\~{o}es, verificando se a prova \'{e} correta ou n\~{a}o \cite{Koivunen2001}. Para que essas camadas entrem em opera\c{c}\~{a}o \'{e} necess\'{a}rio que as demais estejam bem fundamentadas, o que ainda n\~{a}o aconteceu \cite{Freitas2003}.
+
+\section{O Semantic Web Activity}
+O \textit{Semantic Web Activity} \'{e} o grupo de trabalho do W3C respons\'{a}vel pela Web Sem\^{a}ntica. Em sua p\'{a}gina\footnote{http://www.w3.org/2001/sw/} \'{e} poss\'{\i}vel encontrar informa\c{c}\~{o}es em diferentes formatos e com diferentes exig\^{e}ncias de conhecimento sobre a Web Sem\^{a}ntica. Devido a isso, caracteriza-se como uma das fontes mais completas sobre o assunto. Seus subdom\'{\i}nios s\~{a}o organizados em \'{a}reas mais espec\'{\i}ficas, oferecendo informa\c{c}\~{a}o mais focada.
+
+Na p\'{a}gina \'{e} poss\'{\i}vel encontrar as especifica\c{c}\~{o}es correntes da Web Sem\^{a}ntica, publica\c{c}\~{o}es em formatos variados e de diferentes fontes, apresenta\c{c}\~{o}es de eventos internacionais pertencentes a membros do W3C sobre o assunto e relacionados, informa\c{c}\~{o}es sobre os subgrupos ativos, completados, passados e outros grupos do W3C relacionados a Web Sem\^{a}ntica. Tamb\'{e}m \'{e} poss\'{\i}vel encontrar casos de uso, validadores, \'{u}timas atividades e not\'{\i}cias entre outras informa\c{c}\~{o}es.
+
+Um dos recursos mais importantes s\~{a}o as especifica\c{c}\~{o}es das linguagens que fazem a Web Sem\^{a}ntica facilmente acess\'{\i}veis, juntamente com seus casos de uso em organiza\c{c}\~{o}es que j\'{a} as utilizam. Dentro dos grupos de trabalho espec\'{\i}ficos encontram-se casos de uso mais focados, como no caso do \sigla{HCLSIG}{Health Care and Life Sciences Interest Group}\textit{Health Care and Life Sciences Interest Group} (HCLSIG), um dos focos de estudo do cap\'{\i}tulo \ref{capitulo3}. Da mesma maneira que as linguagens que originaram a Web, espera-se que as linguagens que dar\~{a}o suporte a Web Sem\^{a}ntica possuam a mesma robustez, possibilitando f\'{a}cil utiliza\c{c}\~{a}o para aplica\c{c}\~{o}es com variados n\'{\i}veis de complexidade.
+
+\subsection{Linguagens}
+Por que n\~{a}o XML e XML Schema?
+
+Apesar do XML permitir a qualquer um criar suas pr\'{o}prias \textit{tags}, para que as mesmas sejam utilizadas \'{e} necess\'{a}rio conhecer o que \'{e} utilizado em cada \textit{tag} \cite{BernersLee2001}. Apenas \'{e} poss\'{\i}vel, atrav\'{e}s do XML, escolher o tipo de estrutura mais apropriada para uma informa\c{c}\~{a}o em particular. Entretanto, XML n\~{a}o fornece sem\^{a}ntica explicitamente, visto que as \textit{tags} s\~{a}o apenas etiquetas interpretadas pelas aplica\c{c}\~{o}es \cite{Globe2003}, oferecendo apenas estrutura \cite{Fensel2003}. Mais ainda, o XML n\~{a}o fornece estruturas de dados e terminologias para descrever processos de neg\'{o}cio e troca de produtos, apesar de ter um grande papel com rela\c{c}\~{a}o a interoperabilidade de dados \cite{Fensel2003}. Mas, justamente por suas caracter\'{\i}sticas principais que ele \'{e} tido como a camada de funda\c{c}\~{a}o da Web Sem\^{a}ntica \cite{Passin2004}, sendo inclusive base para linguagens da Web Sem\^{a}ntica.
+
+\subsection{RDF e RDFS}
+O \textit{Resource Description Framework} \'{e} uma linguagem de representa\c{c}\~{a}o de informa\c{c}\~{a}o sobre recursos na \textit{World Wide Web}, com inten\c{c}\~{a}o particular de representar metadados sobre recursos Web \cite{Manola2004}.
+De maneira mais t\'{e}cnica, trata-se de uma aplica\c{c}\~{a}o XML que adiciona um modelo de dados simples sobre este. Este modelo de dados fornece tr\^{e}s elementos \cite{Fensel2003}:
+\begin{itemize}
+ \item Sujeito (recurso);
+ \item Predicado (propriedade);
+ \item Objeto (valor).
+\end{itemize}
+
+Possui como vis\~{a}o o fornecimento de uma estrutura de representa\c{c}\~{a}o de conhecimento minimalista para Web \cite{Shadbolt2006}. Uma linguagem com o papel do RDF deve ser capaz de descrever a maior parte dos dados que ser\~{a}o dispon\'{\i}veis, projeto estrutural de conjuntos de dados e os relacionamentos entre dados \cite{Passin2004}. Deve ser utilizado em situa\c{c}\~{o}es onde a informa\c{c}\~{a}o precisa ser processada por aplica\c{c}\~{o}es, e n\~{a}o apenas apresentada as pessoas. Visto que ele fornece um \textit{framework} comum para expressar a informa\c{c}\~{a}o, ela pode ser trocada entre aplica\c{c}\~{o}es sem perda de significado \cite{Manola2004}.
+
+O RDF \'{e} escrito em frases do tipo Recurso, Propriedade e Valor, compreendidos como sujeito, predicado e objeto de uma senten\c{c}a \cite{Breitman2005}. Uma declara\c{c}\~{a}o RDF \'{e} chamada de tripla, pois possui tr\^{e}s partes.
+
+\begin{figure}[ht!]
+  \begin{lstlisting}
+   (pessoa-1, nome, ``Nome Sobrenome'')
+  \end{lstlisting}
+ \caption{Exemplo de uma tripla}
+ \label{algo:tripla}
+\end{figure}
+
+A figura \ref{algo:tripla} possui uma tripla, onde cada valor representa uma parte de uma declara\c{c}\~{a}o RDF:
+\begin{itemize}
+ \item Sujeiro: pessoa-1;
+ \item Predicado: nome;
+ \item Objeto: Nome Sobrenome.
+\end{itemize}
+
+Os valores de um objeto s\~{a}o chamados de literais, e os das propriedades podem ser um literal ou outro recurso. J\'{a} os sujeitos n\~{a}o podem assumir valores literais. Para identificar recursos, o RDF utiliza uma refer\^{e}ncia de URI, que \'{e} uma URI mais caracteres opcionais, chamados identificadores de fragmentos, contidos ap\'{o}s o caractere '\#' na URI \cite{Passin2004}.
+
+O RDF tornou-se uma recomenda\c{c}\~{a}o do W3C em 2004, mas teve sua primeira vers\~{a}o p\'{u}blica em 1999. Atualmente, a linguagem j\'{a} se encontra mais madura e \'{e} utilizada em muitas aplica\c{c}\~{o}es, como o 11g da Oracle \footnote{http://www.oracle.com/technology/products/database/oracle11g/index.html}, Photoshop, entre outros \cite{Feigenbaum2007}. Um padr\~{a}o de metadado muito utilizado, chamado vCard \cite{vCard} tamb\'{e}m possui implementa\c{c}\~{a}o em RDF, bastando utilizar um \textit{namespace} definido \cite{vCardRDF}. Outro padr\~{a}o bastante conhecido que pode ser implementado em RDF \'{e} o RSS, que quando implementado em RDF significa \sigla{RSS}{RDF Site Summary} \textit{RDF Site Summary} \cite{RSS}, bastando tamb\'{e}m declarar o \textit{namespace} adequado para sua utiliza\c{c}\~{a}o.
+
+O \sigla{RDFS}{RDF Schema} RDF Schema (RDFS), pulicado como recomenda\c{c}\~{a}o do W3C em 2004, define primitivas de modelagens adicionais sobre o RDF. Ele toma a especifica\c{c}\~{a}o b\'{a}sica do RDF e a estende para suportar a express\~{a}o de vocabul\'{a}rios estruturados \cite{RDFSchema}. Ele fornece uma linguagem de representan\c{c}\~{a}o de ontologia m\'{\i}nima que foi largamente adotado pela comunidade de pesquisadores \cite{Shadbolt2006}. Permite a defini\c{c}\~{a}o de classes, hierarquias de heran\c{c}a para classes e propriedades, dom\'{\i}nio e restri\c{c}\~{o}es de propriedades. Somente devido as sem\^{a}nticas externas que o RDFS \'{e} \'{u}til \cite{Fensel2003}.
+
+Atrav\'{e}s do RDF Schema \'{e} poss\'{\i}vel, a qualquer pessoa ou comunidade, criar seus pr\'{o}prios vocabul\'{a}rios RDF. Uma das implementa\c{c}\~{o}es mais utilizadas de um RDF Schema \'{e} a \sigla{DCMI}{Dublin Core Metadata Initiative}\textit{Dublin Core Metadata Initiative} (DCMI) \cite{DC2008}. Ele n\~{a}o fornece as classes e propriedades, mas sim um \textit{framework} para descrev\^{e}-las. As classes em RDF Schema s\~{a}o muito semelhantes as obtidas com o conceito de orienta\c{c}\~{a}o a objeto \cite{RDFSchema}.
+
+O RDFS vem sendo criticado como linguagem de representa\c{c}\~{a}o de ontologias, devido a falta de expressividade de seus construtores, que fazem seu poder de express\~{a}o limitado. Para atingir o n\'{\i}vel desejado, foi necess\'{a}ria a cria\c{c}\~{a}o de uma camada de ontologia sobre o RDFS \cite{Breitman2005}, vista a seguir.
+
+\subsection{Ontologia}\label{ontology_languages}
+Ontologia \'{e} um conceito multidisciplinar, possuindo v\'{a}rias defini\c{c}\~{o}es conforme a \'{a}rea de utiliza\c{c}\~{a}o. Para Web Sem\^{a}ntica, ontologia \'{e} uma especifica\c{c}\~{a}o formal e expl\'{\i}cita de uma conceitualiza\c{c}\~{a}o compatilhada \cite{Breitman2005}. Em filosofia, uma ontologia \'{e} uma teoria sobre a natureza da exist\^{e}ncia, sobre que tipos de coisas existem. Intelig\^{e}ncia artificial e pesquisadores da web t\^{e}m usado o termo para seus jarg\~{o}es, e para eles uma ontologia \'{e} um documento ou arquivo que define formalmente as rela\c{c}\~{o}es entre termos. O tipo mais comum de ontologia para a web possui uma taxonomia e um conjunto de regras de infer\^{e}ncia.
+
+A taxonomia define classes de objetos e rela\c{c}\~{o}es entre eles. Classes, subclasses e rela\c{c}\~{o}es entre entidades s\~{a}o ferramentas poderosas para a web. Pode-se expressar um grande n\'{u}mero de rela\c{c}\~{o}es entre entidades atribuindo propriedades para classes e permitindo \`{a}s subclasses herdar essas propriedades.
+Regras de infer\^{e}ncia em ontologias fornecem mais poder. Um programa pode deduzir que, por inst\^{a}ncia, o endere\c{c}o da Universidade Estadual de Londrina est\'{a} no Londrina, deve ser no estado Paran\'{a}, que est\'{a} no Brasil, e ent\~{a}o deve format\'{a}-lo para padr\~{o}es brasileiros. O computador n\~{a}o entende realmente nenhuma informa\c{c}\~{a}o, mas agora pode manipular os termos mais efetivamente de maneira util e significante para usu\'{a}rios humanos.
+Com p\'{a}ginas ontol\'{o}gicas na web solu\c{c}\~{o}es para problemas terminol\'{o}gicos come\c{c}am a emergir \cite{BernersLee2001}.
+
+Ontologias podem melhorar o funcionamento da web de diversas maneiras. Podem ser utilizadas para uma melhor efetividade de buscas na web. Aplica\c{c}\~{o}es mais avan\c{c}adas utilizar\~{a}o ontologias para relatar informa\c{c}\~{a}o em uma p\'{a}gina a estruturas de conhecimento associadas e regras de infer\^{e}ncia. Em adi\c{c}\~{a}o, essa marca\c{c}\~{a}o faz com que seja muito mais simples desenvolver programas que abordam quest\~{o}es complexas cujas respostas n\~{a}o se encontram em apenas uma p\'{a}gina web \cite{Freitas2003}.
+
+Uma linguagem de ontologia deve preencher tr\^{e}s requisitos \cite{Fensel2003}:
+\begin{enumerate}
+ \item Deve ser intuitiva para o ser humano;
+ \item Deve possuir uma sem\^{a}ntica formal bem definida com propriedades de raz\~{a}o estabelecidas em termos de completude, corretude e efici\^{e}ncia;
+ \item Deve possuir uma liga\c{c}\~{a}o com linguagens para Web existentes, como XML e RDF, garantindo interoperabilidade.
+\end{enumerate}
+Algumas linguagens falharam em atender esses requisitos. As linguagens a serem abordadas atendem perfeitamente esses requisitos, como poder\'{a} ser visto a seguir.
+O W3C coloca algumas necessidades que linguagens de ontologia devem atender, que s\~{a}o \cite{Heflin2004}:
+\begin{itemize}
+ \item Ontologias como recursos distintos;
+ \item Conceitos n\~{a}o amb\'{\i}guos referenciados com URIs;
+ \item Extens\~{a}o expl\'{\i}cita de ontologias;
+ \item Compromisso com outras ontologias;
+ \item Metadados ontol\'{o}gicos;
+ \item Versionamento de informa\c{c}\~{a}o;
+ \item Primitivas de defini\c{c}\~{a}o de classes e propriedades;
+ \item Tipos de dado;
+ \item Equival\^{e}ncia de classes e propriedades;
+ \item Equival\^{e}ncia individual;
+ \item Anexar informa\c{c}\~{a}o em declara\c{c}\~{o}es;
+ \item Classes e inst\^{a}ncias;
+ \item Restri\c{c}\~{o}es de cardinalidade;
+ \item Sintaxe XML;
+ \item Etiquetas com significados para humanos;
+ \item Suporte a modelos de caracteres;
+ \item Suportar apenas strings Unicode.
+\end{itemize}
+
+Boa parte desses requisitos foram antendidos pela linguagem RDFS, a primeira linguagem de defini\c{c}\~{a}o de ontologias para Web Sem\^{a}ntica. Entretanto, ele n\~{a}o possui expressividade suficiente \cite{Breitman2005}, e devido a isso foram criadas outras linguagens, abordadas a seguir.
+
+\subsubsection{OIL}
+A \sigla{OIL}{Ontology Interface Layer} \textit{Ontology Interface Layer} (OIL) \'{e} uma linguagem de ontologia patrocinada por um cons\'{o}rcio da Comunidade Europ\'{e}ia. Teve como principal requisito a facilidade na ado\c{c}\~{a}o por parte dos programadores \cite{Freitas2003}. Sua grande vantagem era definir uma linguagem de representa\c{c}\~{a}o de conhecimento que combina ao mesmo tempo \cite{Breitman2005}:
+\begin{itemize}
+ \item L\'{o}gica de descri\c{c}\~{a}o, ou seja, sem\^{a}ntica formal e suporte a infer\^{e}ncia;
+ \item Sistemas baseados em \textit{Frames}, ou seja, primitivas de modelagem epistemol\'{o}gica;
+ \item Linguagens da Web, ou seja, compat\'{\i}vel com XML e RDF.
+\end{itemize}
+Um fato que ajudou na sua ado\c{c}\~{a}o foi a sua modularidade, visto que OIL era dividida em camadas de acordo com a complexidade desejada com seu uso, permitindo um uso mais simples \cite{Freitas2003}.
+O conhecimento de uma ontologia OIL \'{e} dividido em tr\^{e}s n\'{\i}veis \cite{Breitman2005}:
+\begin{itemize}
+ \item Recipiente: respons\'{a}vel por armazenar metadados sobre a pr\'{o}pria ontologia;
+ \item Defini\c{c}\~{a}o: respons\'{a}vel pela defini\c{c}\~{a}o dos conceitos da ontologia;
+ \item Objeto: local onde s\~{a}o armazenadas as inst\^{a}ncias.
+\end{itemize}
+
+\subsubsection{DAML}
+Paralelamente ao OIL, a ag\^{e}ncia americana \sigla{DARPA}{Defense Advanced Research Projects Agency} \textit{Defense Advanced Research Projects Agency} (DARPA), em conjunto com o W3C, estava desenvolvendo a linguagem \sigla{DAML}{DARPA Agent Markup Language} \textit{DARPA Agent Markup Language} (DAML), acrescentando construtores mais expressivos ao RDF. Muitos aspectos dessa linguagem foram herdados do OIL, possuindo funcionalidades relativamente similares \cite{Fensel2003}.
+
+\subsubsection{DAML + OIL}
+DAML + OIL \'{e} a combina\c{c}\~{a}o das duas linguagens, que apresentavam caracter\'{\i}sticas similares. A linguagem \'{e} dividida em duas partes:
+\begin{itemize}
+ \item Dom\'{\i}nio dos objetos: objetos que s\~{a}o membros de classes definidas na ontologia DAML;
+ \item Dom\'{\i}nio do tipo de dados: valores importados do modelo XML.
+\end{itemize}
+Essa separa\c{c}\~{a}o foi realizada para permitir a implementa\c{c}\~{a}o de mecanismos de infer\^{e}ncia, pois realizar infer\^{e}ncia sobre tipos concretos de dados n\~{a}o \'{e} poss\'{\i}vel \cite{Breitman2005}.
+A linguagem \'{e} composta por Elementos de Classe, Express\~{o}es de Classe e Propriedades.
+
+Posteriormente, a DAML + OIL foi acrescida de recursos de internacionaliza\c{c}\~{a}o, apresenta\c{c}\~{a}o e documenta\c{c}\~{a}o, gerando a linguagem OWL \cite{Freitas2003}, pr\'{o}ximo assunto abordado.
+
+\subsubsection{OWL}
+Em 2004, a \sigla{OWL}{Web Ontology Language} \textit{Web Ontology Language} (OWL), linguagem para publica\c{c}\~{a}o e compartilhamento de ontologias na WWW, foi lan\c{c}ada como uma recomenda\c{c}\~{a}o do W3C. Como j\'{a} citado, ela \'{e} uma deriva\c{c}\~{a}o da linguagem DAML + OIL e desenvolvida como uma extens\~{a}o do RDF \cite{OWL}. Foi projetada para atender aplica\c{c}\~{o}es para Web Sem\^{a}ntica, resumidas em \cite{Breitman2005}:
+\begin{itemize}
+ \item Constru\c{c}\~{a}o de ontologias;
+ \item Explicitar fatos sobre um determinado dom\'{\i}nio;
+ \item Racionalizar sobre ontologias e fatos.
+\end{itemize}
+
+OWL \'{e} dividida em tr\^{e}s linguagens, de acordo com sua expressividade \cite{Passin2004}:
+\begin{itemize}
+ \item OWL Full: linguagem completa;
+ \item OWL DL: suporta descri\c{c}\~{a}o l\'{o}gica, que aplica certas restri\c{c}\~{o}es cuidadosamente escolhidas ao tipo de coisas que podem ser ditas de maneira a ganhar vantagens computacionais. Isso permite saber que uma descri\c{c}\~{a}o l\'{o}gica \'{e} comput\'{a}vel, ou ``Completa e Decid\'{\i}vel'';
+ \item OWL Lite: constitui a OWL DL com mais restri\c{c}\~{o}es. A id\'{e}ia \'{e} fazer com que seja f\'{a}cil come\c{c}ar e implementar processadores, permitindo \`{a}s pessoas come\c{c}ar utilizando OWL Lite facilmente e ir se graduando para usos mais complexos.
+\end{itemize}
+
+A linguagem OWL utiliza-se de RDF para se expressar, o que tamb\'{e}m funciona de maneira reversa, logo, qualquer grafo RDF tamb\'{e}m \'{e} um OWL Full, apesar do OWL n\~{a}o atribuir nenhum significado especial para os recursos.
+Um processador que reconhe\c{c}a OWL pode deduzir um pouco do que um processador RDF plano n\~{a}o pode. Por exemplo, ao se afirmar que uma propriedade \textit{contains} \'{e} transitiva, o que \'{e} realizado declarando para \textit{contains} o tipo \textit{owl:transitiveProperty}. A partir da\'{\i} um processador pode reconhecer que se A cont\'{e}m B e B cont\'{e}m C, A deve conter C tamb\'{e}m \cite{Passin2004}.
+
+Os seguintes elementos s\~{a}o b\'{a}sicos da linguagem OWL \cite{Breitman2005}:
+\begin{itemize}
+ \item Namespaces: declara\c{c}\~{o}es localizadas entre tags \textit{rdf:RDF}, no formato de XML \textit{namespaces}, que permitem uma interpreta\c{c}\~{a}o dos identificadores a serem utilizados nas ontologias sem ambig\"{u}idades;
+ \item Cabe\c{c}alhos: cole\c{c}\~{a}o de metadados sobre a ontologia agrupados pela senten\c{c}a \textit{owl:Ontology}, cuja responsabilidade \'{e} registrar coment\'{a}rios, controle de vers\~{a}o e inclus\~{a}o de conceitos e propriedades de outras ontologias;
+ \item Classes: fornecem um mecanismo de abstra\c{c}\~{a}o para agrupamento de recursos com caracter\'{\i}sticas similares. Toda classe est\'{a} associada a um grupo de indiv\'{\i}duos, chamados de extens\~{a}o da classe. Os indiv\'{\i}duos nas extens\~{o}es de classe s\~{a}o chamados de inst\^{a}ncias da classe. Uma classe tem significado intencional relacionado, mas n\~{a}o igual a sua extens\~{a}o de classe, por isso, duas classes podem possuir a mesma extens\~{a}o de classe e permanecerem classes diferentes \cite{OWL};
+ \item Indiv\'{\i}duos: Indiv\'{\i}duos s\~{a}o definidos com axiomas individuais, chamados fatos. S\~{a}o objetos do mundo, pretencem as classes e s\~{a}o relacionados a outros indiv\'{\i}duos;
+ \item Propriedades: Descrevem fatos em geral. Podem se referir a todos os membros que pretencem a uma classe. Os tipos de propriedades s\~{a}o duas: Propriedades do tipo \textit{object}, indiv\'{\i}duos a indiv\'{\i}duos e Propriedades do tipo \textit{datatype}, relacionando indiv\'{\i}duos a valores de dados \cite{OWL};
+ \item Restri\c{c}\~{o}es: Define limites para indiv\'{\i}duos que pertencem a uma classe. Podem ser de tr\^{e}s tipos, que utilizam quantificadores, de cardinalidade e do tipo \textit{hasValue}.
+\end{itemize}
+
+O projeto da linguagem OWL se beneficiou de diversas gera\c{c}\~{o}es de linguagens de ontologia anteriores, uma base te\'{o}rica forte, e uma determina\c{c}\~{a}o na parte que muitos projetistas criaram a linguagem para atender os usos da Web Sem\^{a}ntica. Devido a essas caracter\'{\i}sticas, e a grande aceita\c{c}\~{a}o pela comunidade, certamente ir\'{a} continuar a evoluir \cite{Passin2004}.
+
+\subsection{SPARQL}
+
+Como RDF e RDFS se estabeleceram, a necessidade por reposit\'{o}rios que pudessem guardar conte\'{u}do RDF cresceu. Esses, chamados de \textit{Triple-Stores}, variam em suas capacidades. Alguns focam em fornecer mecanismos ricos para raciocinar sobre as triplas, enquanto outros focam em grandes quantidades de dados. Alguns operam como \textit{plugins} para navegadores existentes e outros como sistemas que podem operar com um grande n\'{u}mero de bancos de dados de terceiros \cite{Shadbolt2006}.
+
+Com o desenvolvimento dos armazenadores, surgiu a necessidade para acesso aos dados dentro do RDF de maneira mais confi\'{a}vel e padronizada. \textit{Simple Protocol and RDF Query Language} (SPARQL) tornou-se uma recomenda\c{c}\~{a}o em 2008 e pode ser utilizada para expressar solicita\c{c}\~{o}es atrav\'{e}s de diversas bases de dados, enquanto os dados s\~{a}o armazenados  nativamente como RDF ou visualizados como tal. Ele cont\'{e}m capacidades para solicitar padr\~{o}es de grafo requeridos e opcionais em conjunto com suas conjun\c{c}\~{o}es e disjun\c{c}\~{o}es. Os resultados das solicita\c{c}\~{o}es podem ser vistos como conjuntos de grafos RDF \cite{SPARQLQuery}.
+
+A linguagem possui como requisitos de projeto as seguintes caracter\'{\i}sticas \cite{SPARQLReq}:
+\begin{itemize}
+ \item \textit{Matching} de padr\~{o}es de grafo RDF - Conjun\c{c}\~{a}o;
+ \item Resultados vinculados a vari\'{a}veis;
+ \item Teste extens\'{\i}vel de valores;
+ \item Resultados de subgrafos;
+ \item Solicita\c{c}\~{o}es locais;
+ \item \textit{Match} opcional;
+ \item Suporte a tipos de dados limitados;
+ \item Limites de resultados;
+ \item Resultados em \textit{streaming};
+ \item \textit{Matching} de padr\~{o}es de grafo RDF - Disjun\c{c}\~{a}o;
+ \item Protocolo \sigla{WSDL}{Web Service Definition Language}\textit{Web Service Definition Language} (WSDL).
+\end{itemize}
+
+Como objetivos de projeto, possui as seguintes caracter\'{\i}sticas \cite{SPARQLReq}:
+\begin{itemize}
+ \item Sintaxe amig\'{a}vel para humanos;
+ \item Integra\c{c}\~{a}o e agrega\c{c}\~{a}o de dados;
+ \item Solicita\c{c}\~{a}o pela exist\^{e}ncia de triplas;
+ \item Protocolo com utiliza\c{c}\~{a}o de banda eficiente;
+ \item Busca por literais;
+ \item Solicita\c{c}\~{o}es sim-n\~{a}o;
+ \item Resultados de solicita\c{c}\~{o}es endere\c{c}\'{a}veis;
+ \item Ordena\c{c}\~{a}o de resultados.
+\end{itemize}
+Apesar de ser um padr\~{a}o recente, SPARQL j\'{a} \'{e} utilizada em algumas aplica\c{c}\~{o}es, como ser\'{a} mostrado mais adiante no cap\'{\i}tulo \ref{capitulo3}.
+
+\subsection{RIF}
+
+O \textit{Rule Interchange Format} (RIF) \'{e} uma linguagem em fase de desenvolvimento que possui um grupo de trabalho com o objetivo de produzir um n\'{u}cleo de regras de linguaguem e extens\~{o}es que em conjunto permitem regras serem traduzidas entre linguagens de regras e assim transferi-las entre sistemas. N\~{a}o se sabe ainda se ser\'{a} um formato ou uma linguagem, o que est\'{a} a cargo do grupo de trabalho definir. Dever\'{a} funcionar como uma interl\'{\i}ngua que estabele uma nova regra de idioma que pode ser mapeada, permitindo que as regras de uma aplica\c{c}\~{a}o possam ser publicadas, compartilhadas e reutilizadas em outras aplica\c{c}\~{o}es e motores de regra.
+
+Devido a grande variedade de linguagens de regras e tecnologias de regras, esse formato comum tomar\'{a} forma de linguagem principal a ser utilizada em conjunto com extens\~{o}es padr\~{a}o ou n\~{a}o. Uma das utiliza\c{c}\~{o}es de uma tecnologia como essa \'{e} para o suporte a infer\^{e}ncia em ontologias independentemente de dom\'{\i}nio \cite{Shadbolt2006}.
+
+Essa miss\~{a}o faz parte dos objetivos do W3C em compartilhar informa\c{c}\~{a}o de forma que seja poss\'{\i}vel o processamento de m\'{a}quina.
+As pr\'{o}prias regras representam um formato de informa\c{c}\~{a}o que ainda n\~{a}o possuem um formato padr\~{a}o de troca. Regras fornecem uma poderosa representa\c{c}\~{a}o de l\'{o}gica de neg\'{o}cio, como regras de neg\'{o}cio, em muitos sistemas de informa\c{c}\~{a}o modernos. Regras s\~{a}o muitas vezes a tecnologia de escolha para cria\c{c}\~{a}o de adaptadores sustent\'{a}veis entre sistemas de informa\c{c}\~{a}o. Como parte da arquitetura da Web Sem\^{a}ntica, regras podem estender ou complementar a linguagem OWL para cobrir cuidadosamente um conjunto mais amplo de aplica\c{c}\~{o}es, com conhecimento sendo codificado em OWL, regras ou ambas.
+
+S\~{a}o objetivos do grupo de trabalho utilizar padr\~{o}es e tecnologias existentes, mesmo que isso torne o projeto mais dif\'{\i}cil. O grande desafio em estabelecer uma linguagem de regras padr\~{a}o \'{e} grande quantidade de abordagens existentes no mercado. Interopera\c{c}\~{a}o entre as mais difundidas ser\'{a} crucial para obten\c{c}\~{a}o do desejo de padroniza\c{c}\~{a}o \cite{RIF}.
+
+\section{Recursos Sem\^{a}nticos}
+Alguns tipo de aplica\c{c}\~{o}es tem muito a ganhar com a proposta da Web Sem\^{a}ntica. Dois exemplos em que isso foi previsto desde os primeiros passos da mesma s\~{a}o os \textit{Web Services} e os Agentes de Software \cite{BernersLee2001}, abordados nesse t\'{o}pico.
+
+\subsection{Web Services}
+Um Web Service \'{e} um software identificado por uma URI, cujas interfaces p\'{u}blicas s\~{a}o definidas e descritas utilizando XML. Outros sistemas podem interagir com \textit{Web Services} da maneira prescrita em sua defini\c{c}\~{a}o, usando mensagens baseadas em XML veiculadas por protolos de Internet \cite{Passin2004}.
+Os elementos de \textit{Web Service} podem ser mapeados em quatro categorias:
+\begin{itemize}
+ \item Troca de dados de maneira que possam ser realizadas transa\c{c}\~{o}es;
+ \item Invoca\c{c}\~{a}o do servi\c{c}o;
+ \item Descri\c{c}\~{a}o do servi\c{c}o e como invoc\'{a}-lo;
+ \item Encontrar o servi\c{c}o correto.
+\end{itemize}
+
+O Objetivo b\'{a}sico de desenvolver \textit{Web Services} Sem\^{a}nticos \'{e} levar a Web a todo seu potencial. Como a tecnologia de \textit{Web Services} traz uma dimens\~{a}o din\^{a}mica \`{a} utiliza\c{c}\~{a}o da Internet, a Web Sem\^{a}ntica pode trazer benef\'{\i}cios no tratamento da informa\c{c}\~{a}o, facilitando a busca, extra\c{c}\~{a}o, representa\c{c}\~{a}o, interpreta\c{c}\~{a}o e manuten\c{c}\~{a}o de dados.
+
+A abordagem atual dos Web Services, baseados em WSDL e \sigla{UDDI}{Universal Description, Discovery and Integration}UDDI, n\~{a}o \'{e} orientada rumo ao estilo de funcionamento da Web Sem\^{a}ntica e n\~{a}o \'{e} madura o suficiente para fornecer sem\^{a}ntica dos dados, l\'{o}gica de neg\'{o}cio e defini\c{c}\~{a}o de uma seq\"{u}\^{e}ncia de mensagens \cite{Breitman2005}. Existem possibilidades de adaptar esses e outros servi\c{c}os, baseados em  padr\~{o}es diferentes, atrav\'{e}s de RDF. Isso se tornar\'{a} mais simples quando for seguida a abordagem \sigla{REST}{Representational State Transfer}\textit{Representational State Transfer} (REST) \cite{REST}, onde est\'{a}gios de Web Services se transformam em recursos \cite{Passin2004}. Acredita-se que a inclus\~{a}o de descri\c{c}\~{o}es sem\^{a}nticas em Web Services atuais, principalmente atrav\'{e}s de ontologias, permitir\'{a} um melhor an\'{u}ncio e descoberta de servi\c{c}os na rede, fornecendo solu\c{c}\~{o}es mais elaboradas para sele\c{c}\~{a}o, composi\c{c}\~{a}o e interoperabilidade de servi\c{c}os heterog\^{e}neos \cite{Breitman2005}.
+
+\subsection{Agentes Inteligentes}
+Agentes Inteligentes s\~{a}o agentes de software flex\'{\i}veis, de comportamento aut\^{o}nomo capaz de reagir apropriadamente ao seu ambiente e tomar iniciativas para atender seus objetivos. Tamb\'{e}m possui capacidades sociais, de maneira que um agente possa interagir eficientemente com outros agentes, e at\'{e} mesmo com pessoas \cite{Passin2004}.
+
+Na Web Sem\^{a}ntica, os agentes se comunicar\~{a}o atrav\'{e}s do compartilhamento de ontologias de dom\'{\i}nio. Elas s\~{a}o importantes por representar entidades importantes do dom\'{\i}nio, sendo papel das ontologias, no contexto da Web Sem\^{a}ntica, n\~{a}o somente explicitar uma teoria de dom\'{\i}nio, mas servir como base para troca de informa\c{c}\~{o}es entre agentes.
+Aplicados \`{a} Web Sem\^{a}ntica, os agentes ter\~{a}o o papel de realizar a parte mais trabalhosa de uma tarefa, e ent\~{a}o exibir os resultados alcan\c{c}ados para os humanos, para que estes possam tomar as suas decis\~{o}es \cite{Breitman2005}.
+
+O poder real da Web Sem\^{a}ntica ser\'{a} realizado somente quando as pessoas criarem muitos programas que coletem conte\'{u}do web de diversas origens, processem a informa\c{c}\~{a}o e troquem resultados com outros programas. A efetividade desses agentes de software aumentar\'{a} exponencialmente quanto mais conte\'{u}dos lidos por m\'{a}quinas e servi\c{c}os automatizados, incluindo outros agentes, se tornarem dispon\'{\i}veis. A web sem\^{a}ntica promove essa sinergia: at\'{e} mesmo agentes que n\~{a}o s\~{a}o expressamente modelados para trabalhar em conjunto podem transferir dados entre si quando os dados possuem sem\^{a}ntica.
+
+Uma importante faceta dos agentes \'{e} a troca de provas escritas na linguagem unificada da Web Sem\^{a}ntica, que nesse caso pode ser interpretada como a RIF.
+
+Outra funcionalidade fundamental s\~{a}o as assinaturas digitais, que s\~{a}o blocos criptografados de dados que computadores e agentes podem utilizar para verificar que a informa\c{c}\~{a}o anexa foi fornecida por uma origem confi\'{a}vel. Os agentes s\~{a}o c\'{e}ticos quanto as informa\c{c}\~{o}es que eles encontram na Web Sem\^{a}ntica at\'{e} que eles tenham checado as origens das informa\c{c}\~{o}es. Logo, agentes ter\~{a}o um papel importante para a desejada ``Web of Trust''.
+
+O processo, chamado descoberta de servi\c{c}o, s\'{o} pode acontecer quando h\'{a} uma linguagem comum para descrever um servi\c{c}o de maneira que permita aos agentes compreender a fun\c{c}\~{a}o oferecida e como tirar vantagem disso. Alguns esquemas de descoberta de servi\c{c}o de baixo n\'{\i}vel est\~{a}o atualmente dispon\'{\i}veis. Entretanto, eles atacam os problemas em seu n\'{\i}vel estrutural ou sint\'{a}tico dependendo altamente de uma padroniza\c{c}\~{a}o de um determinado conjunto de descri\c{c}\~{o}es de funcionalidades. 
+
+Na Web Sem\^{a}ntica, muito mais flex\'{\i}vel, os agentes produtor e consumidor podem chegar a uma compreens\~{a}o compartilhada pela troca de ontologias, que fornece o vocabul\'{a}rio necess\'{a}rio para discuss\~{a}o.
+Um processo t\'{\i}pico envolver\'{a} a cria\c{c}\~{a}o de um valor em cadeia em que os subconjuntos de informa\c{c}\~{a}o ser\~{a}o passados de um agente para outro, cada um adicionando valor, para construir o produto final requisitado pelo usu\'{a}rio \cite{BernersLee2001}.

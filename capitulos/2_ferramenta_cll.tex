@@ -1,0 +1,164 @@
+\chapter{Ferramenta Crickets' little leg}\label{2_ferramenta_cll}
+
+A concepção dessa ferramenta foi idealizada pelos fatores apresentados no capítulo anterior, assim como a motivação para que sua plataforma escolhida fosse \textit{Web}. No entanto, foi necessária a realização de um levantamento de algumas das tecnologias atuais disponíveis neste contexto, de modo que o processo de conhecimento e experimentação das mesmas tenha sido preciso, para que seu desenvolvimento pudesse ser de fato, concluído.
+
+Como o público alvo que se deseja atingir são administradores que possuem sistemas baseados em famílias \textit{Unix}, pode-se levantar características em comum, encontradas em seus sistemas. Dessa maneira, se obtém o perfil das tecnologias que trabalham em conjunto na maioria dos ambientes, o que porporciona maiores chances de adesão da ferramenta. A tabela \ref{tabela:tecnologiasWeb} mostra quais são as tecnologias mais aderidas perante à comunidade, quando implantadas ferramentas em ambientes \textit{Web}:
+
+\begin{table}[ht]
+    \centering
+    \caption{\label{tabela:tecnologiasWeb}Tecnologias mais empregadas em aplicações Web}
+
+    \begin{tabular}{c c}
+        \hline
+        \hline
+
+        Propósito & Tecnologia\\ [0.5ex]
+        \hline
+
+        Sistema Operacional & Baseado em Família \textit{Unix}\\
+
+        Servidor \textit{Web} & \textit{Apache}\footnotemark[1]\\
+
+        Servidor de Banco de dados & \textit{MySQL}\footnotemark[2]\\
+
+        Linguagem de \textit{Scripting} & \textit{PHP}\footnotemark[3]\\ [0.1ex]
+        \hline
+    \end{tabular}
+    \label{webapptech}
+\end{table}
+
+\footnotetext[1]{Servidor Web Apache disponível na página do projeto \url{http://httpd.apache.org/}}
+\footnotetext[2]{Servidor de banco de dados MYSQL disponível na página do projeto \url{http://mysql.com/}}
+\footnotetext[3]{Interpretador de scripts PHP disponível na página do projeto \url{http://php.net/}}
+
+É importante, também, que a ferramenta seja portável, de modo que sua implantação seja facilmente realizada em ambientes que atendam os requisitos tecnológicos básicos, levantados até então. Por isso, foi constatado que um bom \textit{framework} de desenvolvimento \textit{Web} que obedecesse este anseio devesse ser pesquisado. Para tanto, dentre os demais disponíveis no mercado, para a linguagem de \textit{scripting PHP}, o \textit{framework CakePHP}\footnote{Disponível em \url{http://cakephp.org/}} prevaleceu, pois tem como uma das características mais marcantes, a facilidade com que as aplicações são implantadas, não tendo exigência alguma quanto à modificações na estrutura padrão do Sistema Operacional, assim os administradores não precisam realizar operações custosas em seus sistemas, para suportar exclusivamente a ferramenta.
+
+
+\section{Tecnologias envolvidas}
+
+Foi realizado um levantamento inicial sobre as tecnologias envolvidas no processo de desenvolvimento da ferramenta, onde serão abordadas suas principais características. Alguns contrapontos foram encontrados em sua definição, principalmente com relação à linguagem de \textit{scripting} empregada e seu \textit{framework} escolhido, discutidos adiante.
+
+Na busca por uma combinação ideal, foi necessário o entendimento sobre o ambiente escolhido para implantação e as implicações de se ter tal ferramenta disponibilizada em meio ao sistema.
+
+\subsection{Servidor Web}
+
+Como servidor \textit{Web}, foi escolhido o \textit{Apache}, devido sua popularidade e uso amplamente difundido entre a comunidade de desenvolvedores e administradores de sistemas. É um dos maiores projetos em Software Livre do mundo, sendo percursor na criação da incubadora de projetos da \textit{Apache Software foundation}\footnote{\url{http://www.apache.org/}}. Tem sido desenvolvido desde o ano de 1995 e conta com uma comunidade extremamente ativa de colaboradores, provenientes de diferentes partes de todo o mundo.
+
+Perante o mercado e às outras soluções de servidores \textit{Web}, o \textit{Apache} ocupa uma porção de uso correspondente a aproximadamente 47\%, segundo revelam as pesquisas \cite{Netcraft} disponibilizadas periodicamente pela companhia de serviços relacionados à \textit{Internet}, \textit{Netcraft}\footnote{Netcraft: \url{http://netcraft.com/}}. A figura \ref{figura:utilizacao_webservers}
+
+\begin{figure}[h]
+    \begin{center}
+        \includegraphics[scale=0.8]{./figuras/overallc.png}
+
+        \caption{Utilização global de \textit{Webservers} \cite{Netcraft}.}
+    \end{center}
+\end{figure}
+
+Sua integração com os Sistemas Operacionais baseados em famílias \textit{Unix} é suave, pois foi projetado para que seja integrado perfeitamente sob sua arquitetura. Muitos sabores de distribuições baseadas no \textit{Kernel}\footnote{O \textit{Kernel}, trata-se do núcleo do Sistema Operacional, entre outros, provê inúmeras camadas de abstração entre o \textit{hardware} e o \textit{software} empregados em um computador.} do \textit{GNU/Linux}\footnote{Disponível em \url{http://kernel.org/}}, por exemplo, incluem o \textit{Apache} como pacote opcional no momento de sua instalação, junto aos demais serviços de rede, sendo assim, uma alternativa bastante plausível para que seja utilizado, além de não exigir grandes esforços no momento de sua configuração para que entre em ambiente de produção.
+
+\subsection{Linguagem de Scripting}
+
+Para que a ferramenta pudesse ser desenvolvida em ambiente \textit{Web}, foi definido que se utilizaria uma linguagem de \textit{scripting}, devido a agilidade e quantidade de recursos que simplificam muitos processos de desenvolvimento, comuns a este gênero de linguagens de programação.
+
+Sua concepção, assume que as linguagens de \textit{scripting}, não sejam utilizadas na construção de aplicações desde toda sua base, mas que reutilizem uma série de componentes e bibliotecas previamente implementadas, possivelmente em diferentes linguagens de programação, ou ainda que controlem outros \textit{softwares} através de chamadas específicas \cite{Scripting}. Por este motivo, são amplamente empregadas nos servidores \textit{Web}, que implementam todo o processo de receber requisições \textit{HTTP} de seus clientes e repassá-las para filtros especiais, podendo estes ser interpretadores de código, e que ainda no lado do servidor, possam responder aos clientes com conteúdo estatico ou dinâmico à tais requisições, de acordo com sua entrada e a um determinado conjunto de estados mapeados pela aplicação requisitada.
+
+O servidor \textit{Web} \textit{Apache}, utiliza-se de módulos para suportar a integração com outras tecnologias, sendo que existem muitos que são implementados para suportar diversas linguagens de \textit{scripting}. O módulo mais difundido e bem suportado pelo \textit{Apache}, para este tipo de operação, é o \textit{mod\_php}, que provê acesso às funcionalidades que a linguagem de programação \textit{PHP} oferece. É distribuido juntamente aos pacotes binários e fontes do \textit{Apache}, sua configuração é praticamente nativa, não necessitando mais que pouquíssimas alterações no arquivo de configuração principal\footnote{Em instalações padrão, este arquivo é encontrado em \textit{/etc/httpd/httpd.conf}} do Apache, para que tal suporte esteja ativo.
+
+A figura seguinte, mostra um gráfico onde existe um comparativo entre o uso das linguagens de programação, sendo que é notória a importância da linguagem de scripting PHP, já que em sua categoria, lidera em primeiro lugar, frente aos seus maiores concorrentes: Ruby\footnote{Disponível em \url{http://ruby-lang.org}}, Pearl\footnote{Disponível em \url{http://perl.com/}} e Python\footnote{Disponível em \url{http://python.org/}}.
+
+\clearpage
+\begin{figure}[h!tp]
+    \begin{center}
+        \includegraphics[scale=0.7]{./figuras/tpci_trends.png}
+
+        \caption{Utilização das linguagens de programação. \cite{Languages}}
+    \end{center}
+\end{figure}
+
+\subsection{Banco de dados}
+
+Em aplicações \textit{Web}, utilizando-se o servidor \textit{Web Apache} em conjunto com a linguagem de \textit{scripting PHP}, existe um ótimo suporte ao \textit{SGBD MySQL}. Trata-se de um banco de dados relacional e que oferece suporte à multiplas conexões simultâneas.
+
+Assim como as tecnologias \textit{Apache} e \textit{PHP}, também encontra-se como pacote de instalação opcional ao conjunto de serviços de rede, nas distribuições baseadas no \textit{Kernel} do \textit{GNU/Linux}. Sua aceitação é grande, em meio aos desenvolvedores \textit{Web}. De maneira similar, suporte dado tanto pela sua comunidade de desenvedores e pela sua base de usuários é extremamente vasto, o que implica em uma adesão maior pela maioria das organizações que oferecem aplicações \textit{Web}.
+
+\subsection{Framework de desenvolvimento Web}
+
+Para o desenvolvimento de aplicações \textit{Web}, é amplamente utilizado o auxílio que os \textit{frameworks} oferecem, pois muitos processos repetitivos são automatizados, fazendo com que o desenvolvimento se dê de maneira mais rápida e esteja menos suscetível a erros de implementação, oferecendo aos desenvolvedors níveis consideráveis de abstração de seus problemas, permitindo que se concentrem integralmente na lógica de negócios envolvida em seus projetos.
+
+Levando-se em considerações o conjunto de tecnologias envolvidas, optou-se pela utilização do \textit{framework CakePHP}. Essa decisão foi guiada após o estudo de outra tecnologia, proposta anteriormente ao início de seu desenvolvimento.
+
+Fora proposto no plano de estágio, a utilização da linguagem de programação \textit{Python}, em conjunto ao \textit{framework} de desenvolvimento \textit{Web Django\footnote{Disponível em \url{http://djangoproject.com/}}}. No entanto, como requisito principal de funcionamento, tal framework necessita obrigatoriamente que seja instituído um processo que envolve modificações na hierarquia do Sistema Operacional, através de sua instalação. Isso nos remete à uma das características desejadas para a ferramenta \textit{Cricket's little leg}: que a portabilidade seja facilitada ao máximo, de acordo com o perfil mais comum entre ambientes de produção e desenvolvimento \textit{Web}. Como nem todos os sistemas administrados requerem que a linguagem de \textit{scripting Python} seja utilizada em conjunto ao ambiente \textit{Web} e, ainda sim, é incomum que nestes ambientes sejam empregadas tecnologias como \textit{Django}, optou-se pela substituição deste \textit{framework} por algum que seja tecnologicamente equivalente e que atenda ao requisito de portabilidade, desejado desde o início da concepção da ferramenta.
+
+O \textit{CakePHP} é um \textit{framework} que atende perfeitamente esta necessidade específica, sendo equivalente até mesmo em termos de arquitetura empregada na base do \textit{framework}. Tem como vantagem principal, relativa à portabilidade, de poder ser empacotado junto à aplicação desenvolvida, e desempacotado dentro do diretório que o \textit{Apache} utiliza para servir às requisições realizadas por seus clientes, sem que seja necessária a instalação de softwares adicionais para o seu pleno funcionamento em ambiente de produção.
+
+Pelas circunstâncias e motivos apresentados, justifica-se a troca de \textit{frameworks}, pois esta foi realizada em prol da satisfação do requisito de portabilidade, o que visa estimular ainda mais a adesão da ferramenta por parte dos administradores de sistemas que possuem, de maneira praticamente nativa, um ambiente propício e compatível ao apresentado até aqui.
+
+\section{Estrutura}
+
+O \textit{Crickets' little leg} foi projetado para se comportar de acordo com os padrões estabelecidos pelo \textit{Design Pattern MVC}, em conjunção às convenções empregadas no \textit{framework} de desenvolvimento \textit{Web CakePHP}.
+
+O \textit{Design Pattern MVC} consiste de três camadas principais:
+\begin{itemize}
+    \item \textbf{M}odel: responsável pelos dados da aplicação, são compreendidos pelo modelo, bancos de dados, arquivos em disco, dados em memória, enfim, toda e qualquer forma de fonte que contenha os dados consultados e gravados pela aplicação.
+
+    \item \textbf{V}iew: a camada de apresentação, trata-se de como os dados serão dispostos. Em uma aplicação \textit{Web}, consiste de uma página contento elementos \textit{HTML}, \textit{CSS}, possivelmente \textit{Javascript} e \textit{XML}, em conjunto aos dados processados no lado do servidor por uma linguagem de scripting, que no caso é a \textit{PHP}.
+
+    \item \textbf{C}ontroller: resposável pelo fluxo de execução da aplicação, desde as requisições realizadas pelos navegadores dos clientes, até o processamento interno das mesmas, passando pela camada de modelo e pela disposição final dos dados possivelmente processados, na camada de visão.
+\end{itemize}
+
+A figura a seguir, apresenta de maneira esquemática, como se dá a ligação entre as camadas \textit{MVC}:
+
+\clearpage
+\begin{figure}[h!tp]
+    \begin{center}
+        \includegraphics[scale=1]{./figuras/ModelViewControllerDiagram.png}
+
+        \caption{Diagrama representativo do \textit{Design Pattern MVC}.}
+    \end{center}
+\end{figure}
+
+Com esta abordagem, a construção de aplicações \textit{Web} torna-se extremamente simplificada, fornecendo diretivas suficientes para que sua construção seja rápida e que tragam ao desenvolvedor um processo bem definido em sua codificação, possibilitando uma concentração mais aplicada à resolução da lógica proposta pelo problema que se deseja resolver.
+
+O \textit{CakePHP} utiliza o \textit{Design Pattern MVC} do mesmo modo que é ilustrado na figura seguinte:
+
+\begin{figure}[h!tp]
+    \begin{center}
+        \includegraphics[scale=0.8]{./figuras/basic_mvc_cake.png}
+
+        \caption{\textit{CakePHP} e o \textit{Design Pattern MVC}.}
+    \end{center}
+\end{figure}
+
+Através dos ítens numerados, pode-se traçar um perfil padrão para todas as requisições realizadas para as aplicações que fazem uso do \textit{CakePHP}:
+\begin{enumerate}
+    \item O cliente realiza a requisição.
+
+    \item O \textit{dispatcher}\footnote{O mecanismo chamado \textit{dispatcher}, permite que o processo de passagem de uma mensagem para uma sequência específica de código, ou método, seja realizado em tempo de execução.} verifica a \textit{URL} e seus dados, acionando uma chamada em um método de um objeto específico, instanciado como controlador.
+
+    \item O controlador escolhido pelo \textit{dispatcher}, passa o fluxo de execução, para o modelo designado pela chamada recebida, com os dados necessários para sua execução, caso sejam necessários.
+
+    \item O modelo responde ao controlador com os dados requisitados, processados após serem extraídos da fonte de dados padrão da aplicação.
+
+    \item O controlador encaminha os dados recebidos à visão, aplicando filtros para ajustes finais, caso sejam necessários.
+
+    \item A visão renderiza os dados, junto aos elementos comuns, encontrados em páginas \textit{Web}, como tabelas e campos de formulários, sendo assim visualizados no navegador do cliente, que antes fizera a requisição inicial.
+\end{enumerate}
+
+
+\section{Características}
+
+As características principais da ferramenta são compreendidas pelos ítens denominados a seguir:
+
+\begin{itemize}
+    \item Utilização do mecanismo básico de autenticação \cite{BasicAuth}, implementado nativamente pelo \textit{Apache} e suportado pela grande maioria dos navegadores \textit{Web} existentes no mercado, no intuito de facilitar a implementação da parte de \textit{logon} no sistema, visando acima de tudo, a simplicidade por meio da reutilização de componentes.
+
+    \item Visualização dos ataques de dicionário ao serviço \textit{SSH} sofridos no servidor local, a partir da interpretação dos dados gravados em \textit{log}.
+
+    \item Visualização dos ataques de dicionário ao serviço \textit{SSH} sofridos em qualquer outro servidor, a partir do upload de seus arquivos de \textit{log}.
+
+    \item Tela provida com paginação básica, contendo os dados relativos aos ataques sofridos, após o processamento dos arquivos de \textit{log}.
+
+    \item Possibilidade de geração de regras de \textit{Iptables}\footnote{\textit{IPtables} é uma ferramenta que permite aos administradores de sistemas baseados em famílias \textit{Unix}, que configurem as tabelas de \textit{firewall} encontradas no \textit{Kernel} do Sistema Operacional.}, capazes de barrar ataques deste gênero, com base nos endereços de \textit{IP} pertencentes aos atacantes identificados pela interpretação dos registros contidos no arquivo de \textit{log}.
+\end{itemize}
+
+Uma questão abordada durante a fase de idealização do projeto, era a capacidade de gerar alertas aos administradores do sistema. Como a ferramenta teve seu desenvolvimento voltado exclusivamente para a visualização das informações em forma de relatório, essa característica foi eliminada, por fugir ao escopo de sua atuação. Tal tarefa seria exclusiva à Sistemas de Detecção de Intrusão e por este motivo, foi considerada semanticamente incompatível com o propósito do projeto, justificando assim, o motivo pelo qual tal característica fora eliminada do processo de desenvolvimento.

@@ -1,0 +1,161 @@
+\chapter{World Wide Web}\label{capitulo1}
+Em 1989 surgia uma das maiores ferramentas utilizadas pela comunidade para a disponibiliza\c{c}\~{a}o, busca e troca de informa\c{c}\~{o}es: a \sigla{WWW}{World Wide Web}\textit{World Wide Web} (WWW). Inicialmente foi considerada ``vaga, mas excitante'' \cite{Berners-Lee1989b} pelo seu pr\'{o}prio criador, que buscava resolver um problema de gerenciamento de informa\c{c}\~{a}o sobre projetos do \sigla{CERN}{European Organization for Nuclear Research} \textit{European Organization for Nuclear Research} (CERN), seu instituto de pesquisa, e principalmente os relacionados ao \sigla{LHC}{Large Hadron Collider} \textit{Large Hadron Collider} (LHC). Devido a quantidade de informa\c{c}\~{a}o gerada nos projetos do instituto, dados complexos eram perdidos prejudicando as pesquisas \cite{Berners-Lee1989}. A solu\c{c}\~{a}o se baseava num sistema de texto distribu\'{\i}do n\~{a}o linear, conhecido como hipertexto.
+Mais especificamente, o problema consistia de um grande n\'{u}mero de pessoas que necessitava do compartilhamento de informa\c{c}\~{o}es entre elas. Como toda organiza\c{c}\~{a}o, existe uma hierarquia entre as pessoas, novas pessoas ingressam em novos projetos diariamente, e ao observar isso, foi notada uma organiza\c{c}\~{a}o das pessoas conectadas como uma teia. As pessoas que ingressavam perdiam muito tempo para saber o que havia sido realizado antes delas, logo a informa\c{c}\~{a}o era constantemente perdida, apesar de estar gravada, n\~{a}o era encontrada.
+
+Alguns exemplos das quest\~{o}es sem resposta, devido a esse problema de gerenciamento de informa\c{c}\~{a}o eram:
+\begin{itemize}
+ \item Onde este m\'{o}dulo \'{e} utilizado?
+ \item Quem escreveu este c\'{o}digo?
+ \item Que documentos existem sobre este conceito?
+ \item Que documentos referenciam este?
+\end{itemize}
+
+No pr\'{o}prio projeto, j\'{a} havia uma previs\~{a}o de que isso aconteceria com o mundo todo em alguns anos, sendo o CERN, durante a \'{e}poca do projeto, uma pequena amostra do problema. Inclusive j\'{a} haviam previs\~{o}es acerca de projetos comerciais que resolveriam esse tipo de problema, baseados na solu\c{c}\~{a}o apresentada.
+Alguns conceitos chave, apresentados no projeto, eram os n\'{o}s e os \textit{links}. N\'{o}s representam ou descrevem algo em particular, j\'{a} os \textit{links} interligam dois n\'{o}s. Exemplos de n\'{o}s podem ser:
+\begin{itemize}
+ \item Pessoas;
+ \item M\'{o}dulos de software;
+ \item Conceitos;
+ \item Documentos.
+\end{itemize}
+
+J\'{a} os \textit{links} podem representar:
+\begin{itemize}
+ \item depend\^{e}ncia;
+ \item uma parte de;
+ \item refer\^{e}ncia;
+ \item utiliza\c{c}\~{a}o.
+\end{itemize}
+
+Os requisitos levantados para atender as necessidades do CERN eram:
+\begin{enumerate}
+ \item Acesso remoto atrav\'{e}s da rede;
+ \item Heterogeneidade;
+ \item Descentraliza\c{c}\~{a}o;
+ \item Acesso a dados existentes;
+ \item \textit{Links} privados;
+ \item Armazenamento e exibi\c{c}\~{a}o de texto em \sigla{ASCII}{American Standard Code for Information Interchange}ASCII em telas 24x80;
+ \item An\'{a}lise automatizada de dados;
+ \item \textit{Links} vivos.
+\end{enumerate}
+Nesta etapa j\'{a} era desej\'{a}vel a exibi\c{c}\~{a}o de gr\'{a}ficos, mas ainda era um requisito que possu\'{\i}a pouca penetra\c{c}\~{a}o.
+Em 1990, Tim Berners-Lee j\'{a} possu\'{\i}a todas as ferramentas necess\'{a}rias para que a Web funcionasse. Foi implementado o \sigla{HTTP}{HyperText Transfer Protocol} \textit{HyperText Transfer Protocol} (HTTP) \cite{HTTP11}, as \sigla{URI}{Uniform Resource Identifier} \textit{Uniform Resource Identifier} (URI) \cite{URI}, o \sigla{HTML}{HyperText Markup Language} \textit{HyperText Markup Language} (HTML) \cite{HTML401}, um \textit{Web Browser} chamado \textit{WorldWideWeb} \cite{WebServer} e um servidor Web \cite{WebBrowser}, al\'{e}m das primeiras p\'{a}ginas web que descreviam o projeto \footnote{http://www.w3.org/History/19921103-hypertext/hypertext/WWW/TheProject.html}.
+Em Agosto de 1991 a \textit{World Wide Web} foi publicada como um servi\c{c}o dispon\'{\i}vel na Internet.
+
+Desde ent\~{a}o a web foi crescendo, com a implementa\c{c}\~{a}o dos primeiros \textit{browsers} gr\'{a}ficos e que funcionassem em outras plataformas, e n\~{a}o apenas na NeXT, a \'{u}nica suportada inicialmente, como o WorldWideWeb. Surgiu o primeiro \textit{browser} comercial, o Netscape Navigator, derivado do Mosaic. O primeiro \textit{browser} da Microsoft foi chamado de Cello.
+
+\section{O World Wide Web Consortium}
+Fundado em 1994 por Tim Berners-Lee, o \sigla{W3C}{World Wide Web Consortium} \textit{World Wide Web Consortium} (W3C) \'{e} um cons\'{o}rcio internacional onde as organiza\c{c}\~{o}es membro, equipes fixas e o p\'{u}blico trabalham em conjunto para desenvolver padr\~{o}es para Web, chamados de Recomenda\c{c}\~{o}es. Criado no \sigla{MIT/LCS}{Instituto de Tecnologia de Massachussets, Laborat\'{o}rio para Ci\^{e}ncia da Computa\c{c}\~{a}o}Instituto de Tecnologia de Massachussets, Laborat\'{o}rio para Ci\^{e}ncia da Computa\c{c}\~{a}o, MIT/LCS, em colabora\c{c}\~{a}o com a Organiza\c{c}\~{a}o Europ\'{e}ia para Pesquisa Nuclear, CERN, sua miss\~{a}o \'{e} levar a WWW a todo seu potencial desenvolvendo protocolos e guias que permitam o crescimento da Web, sempre levando em conta a interoperabilidade \cite{Jacobs2008}. Para isso, foi tomada a decis\~{a}o de fornecer as tecnologias gratuitamente, sem patentes ou d\'{\i}vidas de \textit{royalties}, podendo assim ser adotadas por todos. O cons\'{o}rcio possui escrit\'{o}rios em todo o mundo, inclusive no Brasil. Esses escrit\'{o}rios possuem o objetivo de promover as tecnologias do W3C e encorajar a participa\c{c}\~{a}o internacional nas atividades do W3C \cite{Jacobs2008-2}. Seus objetivos, em conformidade com sua miss\~{a}o, s\~{a}o criar uma Web, para todos, em qualquer lugar tendo como papel ser uma base de conhecimento confi\'{a}vel. A figura \ref{fig:web_arquitetura} mostra a vis\~{a}o estrutural da Web\footnote{http://www.w3.org/Consortium/technology}, foco de trabalho do W3C.
+
+\begin{figure}[htb!]
+    \centering
+    \includegraphics[scale=0.8]{./figuras/arquitetura_web.png}
+    \caption{Arquitetura Geral da Web \cite{WebTech}}
+    \label{fig:web_arquitetura}
+\end{figure}
+
+A maior parte do trabalho do W3C est\'{a} centralizada no desenvolvimento de padr\~{o}es para web. Para isso, existe um processo realizado para promover o desenvolvimento de alta qualidade baseado no consenso dos \textit{stakeholders}. O objetivo final de todo trabalho, \'{e} chegar ao n\'{\i}vel de Recomenda\c{c}\~{a}o, o equivalente a um Padr\~{a}o Web. O processo para isso ocorre da seguinte maneira:
+\begin{enumerate}
+ \item Pessoas que possuem interesse em um assunto particular expressam-no atrav\'{e}s de um formul\'{a}rio de submiss\~{a}o de membros. Ent\~{a}o um conjunto de monitores trabalham dentro e fora do W3C por sinais de interesse. O W3C tamb\'{e}m pode organizar \textit{Workshops} para recrutar pessoas com interesse no assunto e discutir t\'{o}picos de interesse;
+ \item Quando existe interesse suficiente, o diretor anuncia o desenvolvimento de uma proposta para uma nova atividade ou uma proposta de Grupo de Trabalho. Uma Proposta de Atividade descreve o escopo, dura\c{c}\~{a}o e outras caracter\'{\i}sticas do trabalho pretendido e inclui as propostas de Grupos de Trabalho, Interesse e Coordena\c{c}\~{a}o para realizar o trabalho. Membros do W3C revisam cada Proposta de Atividade e os Grupos de Interesse associados. Quando h\'{a} suporte dentro do W3C para investir recursos no t\'{o}pico de interesse, o diretor aprova as atividades e os grupos iniciam seus trabalhos;
+ \item Os tipos de participantes dos Grupos de Trabalho do W3C s\~{a}o tr\^{e}s: Membros Representantes, Especialistas Convidados e Representantes de Grupo;
+ \item Os Grupos de Trabalho geralmente criam especifica\c{c}\~{o}es e guias que passam por ciclos de revis\~{a}o at\'{e} avan\c{c}arem para o est\'{a}gio de recomenda\c{c}\~{a}o. Para chegar a esse estado, o W3C exige que os relat\'{o}rios t\'{e}cnicos sejam amplamente revisados pelos membros e pelo p\'{u}blico, e o grupo de trabalho deve atender requisitos de implementa\c{c}\~{a}o e interoperabilidade.
+\end{enumerate}
+
+At\'{e} que um documento chegue a um consenso e seja publicado como uma recomenda\c{c}\~{a}o do W3C, ele passa pelas seguintes fases \cite{W3CProcess}:
+\begin{enumerate}
+ \item Publica\c{c}\~{a}o do primeiro rascunho de trabalho p\'{u}blico;
+ \item An\'{u}ncio de \'{u}ltima chamada;
+ \item Chamada para implementa\c{c}\~{a}o;
+ \item Chamada para revis\~{a}o de uma proposta de recomenda\c{c}\~{a}o;
+ \item Publica\c{c}\~{a}o de uma recomenda\c{c}\~{a}o.
+\end{enumerate}
+
+Atualmente, diversos padr\~{o}es s\~{a}o mantidos ou apoiados pelo W3C, inclusive os que s\~{a}o a sua base, HTTP, HTML e URI. Novas vers\~{o}es desses e outros padr\~{o}es j\'{a} estabelecidos s\~{a}o desenvolvidos, e analisados pelos grupos de trabalho do cons\'{o}rcio. Al\'{e}m disso, novas recomenda\c{c}\~{o}es de padr\~{o}es s\~{a}o desenvolvidas conforme as necessidades levantadas pelos membros.
+
+\section{O despertar para a Web}
+Apesar de seu grande potencial, a web ainda n\~{a}o era muito disseminada at\'{e} meados de 1996, at\'{e} porque seu custo ainda era elevado. Neste ano, empresas perceberam a possibilidade de publicar informa\c{c}\~{a}o mundialmente de forma instant\^{a}nea e, a grande possibilidade de com\'{e}rcio pela Web. A partir desse momento, a web iniciou um grande crescimento, tanto na quantidade de informa\c{c}\~{o}es e servi\c{c}os disponibilizados, quanto no n\'{u}mero de utilizadores \cite{Ferracioli2007}.
+Um dos acontecimentos mais marcantes dessa \'{e}poca foi a chamada guerra dos \textit{browsers}, travada principalmente entre o Microsoft Internet Explorer e Netscape Navigator \cite{WebHistory}. Durante essa \'{e}poca, os padr\~{o}es web eram desenvolvidos e dispon\'{\i}veis como hoje, entretanto, eram praticamente inexistentes nas implementa\c{c}\~{o}es dos \textit{web sites}, que utilizavam tecnologias propriet\'{a}rias presentes, na maioria das vezes, em apenas um dos \textit{browsers}. Essa \'{e}poca foi marcada por grandes dificuldades para o desenvolvimento de sistemas web interoper\'{a}veis, visto que os padr\~{o}es web praticamente n\~{a}o eram seguidos e tecnologias propriet\'{a}rias acabaram se difundindo \cite{Ferracioli2007}.
+
+Talvez isso se deva a necessidade de web sites com cada vez mais recursos, de maneira \'{a}gil. Visto que a defini\c{c}\~{a}o de um padr\~{a}o \'{e} um processo lento, as desenvolvedoras de \textit{browsers} desenvolviam suas pr\'{o}prias solu\c{c}\~{o}es rapidamente, oferecendo uma alternativa ao mercado \cite{Ferracioli2007}. Isso atra\'{\i}a mais usu\'{a}rios para os \textit{sites}, entretanto aumentava o esfor\c{c}o de implementa\c{c}\~{a}o e os custos. Devido \`{a} difus\~{a}o do sistema operacional Microsoft Windows, que j\'{a} vinha com o navegador Microsoft Internet Explorer por padr\~{a}o, o Netscape acabou perdendo mercado e, em 1998 abriu seu c\'{o}digo fonte, o que deu origem aos navegadores Mozilla, presentes at\'{e} hoje no mercado.
+
+A preocupa\c{c}\~{a}o com a sem\^{a}ntica de documentos come\c{c}a a se tornar um conceito mais evidente a partir desse per\'{\i}odo. Durante a guerra dos navegadores foi percebido pelos desenvolvedores que a utiliza\c{c}\~{a}o dos padr\~{o}es Web, principalmente os fornecidos pelo W3C, poderiam melhorar a produtividade, diminuir custos, aumentar a interoperabilidade e facilitar a manuten\c{c}\~{a}o. Tamb\'{e}m havia o benef\'{\i}cio relacionado aos motores de busca, visto que um documento semanticamente correto possui mais visibilidade nos mesmos. Entretanto, o principal motivo da ado\c{c}\~{a}o dos padr\~{o}es foi justamente a interoperabilidade, visto que um c\'{o}digo semanticamente correto possu\'{\i}a mais chances de funcionar corretamente em todos os \textit{browsers}, evitando assim a necessidade de diversas implementa\c{c}\~{o}es para um mesmo site. A \'{u}nica coisa que n\~{a}o garantia esse comportamento, era a conformidade dos \textit{browsers} com os padr\~{o}es web e o desenvolvimento de tecnologias propriet\'{a}rias nos mesmos, o que vivenciamos at\'{e} os dias atuais. A principal mudan\c{c}a origin\'{a}ria dessa \'{e}poca foi a preocupa\c{c}\~{a}o com a separa\c{c}\~{a}o do conte\'{u}do, apresenta\c{c}\~{a}o e comportamento. Para isso, deveriam ser utilizadas as linguagens apropriadas para cada um desses recursos, o que caracteriza uma sem\^{a}ntica mais correta na utiliza\c{c}\~{a}o de elementos e um aumento na preocupa\c{c}\~{a}o relacionada ao conte\'{u}do.
+Essa tend\^{e}ncia foi aplicada no desenvolvimento do HTML 4.1, que eliminou ou tornou deprecados diversos elementos que tinham fins de apresenta\c{c}\~{a}o, alguns inclusive criados durante a guerra dos \textit{browsers} \cite{Ferracioli2007}.
+
+Entre 1999 e 2001 ocorreu o chamado ``boom .com'', onde foram realizados grandes investimentos de capital em novos neg\'{o}cios na web. Este ``boom'' \'{e} compar\'{a}vel a outros j\'{a} ocorridos na sociedade, como o das estradas de ferro, r\'{a}dio, transistor, entre outros. Segundo o Miniwatts Marketing Group, em dezembro de 2000, o n\'{u}mero de usu\'{a}rios chegou a 360.985.492 de pessoas\footnote{http://www.internetworldstats.com/stats.htm}.
+Ap\'{o}s esse per\'{\i}odo, o crescimento da web continuou, agregando cada vez mais novos usu\'{a}rios e servi\c{c}os \cite{WebHistory}. Entretanto, pouco tempo depois, a pr\'{o}pria web se reinventou. O usu\'{a}rio final possu\'{\i}a um papel muito passivo, apenas como um simples consumidor. O aumento da interatividade dos sistemas com o usu\'{a}rio e a possiblidade de cria\c{c}\~{a}o de conte\'{u}do s\~{a}o premissas da chamada Web 2.0, uma forte tend\^{e}ncia atual. Possui grande cunho social e reinventa o conceito de usu\'{a}rio, sendo este tamb\'{e}m respons\'{a}vel pela cria\c{c}\~{a}o da pr\'{o}pria aplica\c{c}\~{a}o que utiliza, o que proporciona uma melhor experi\^{e}ncia para o mesmo. \'{E} interessante notar que o conceito al\'{e}m de cunho social, possui grande fundamenta\c{c}\~{a}o tecnol\'{o}gica baseada em padr\~{o}es para Web, promovendo assim a sua utiliza\c{c}\~{a}o \cite{Web2}. Atualmente, segundo o Miniwatts Marketing Group, o n\'{u}mero de usu\'{a}rios continua crescendo em grandes porcentagens, chegando a 1.463.632.361 de usu\'{a}rios, um crescimento de 305\% em rela\c{c}\~{a}o ao ano 2000. A pr\'{o}xima revolu\c{c}\~{a}o tende a ser a Web Sem\^{a}ntica, conceito que apareceu pela primeira em 2001 com um artigo publicado na \textit{Scientific American} pelo criador da WWW, Tim Berners-Lee \cite{BernersLee2001}, assunto que ser\'{a} abordado posteriormente no cap\'{\i}tulo \ref{capitulo2}.
+
+\section{Desenvolvimento Tecnol\'{o}gico da Web}
+As linguagens para marca\c{c}\~{a}o para Web s\~{a}o grandes respons\'{a}veis pela sua dissemina\c{c}\~{a}o e essenciais para o funcionamento da mesma. Mantidas em sua maioria pelo W3C, possuem toda documenta\c{c}\~{a}o com acesso f\'{a}cil e por serem padr\~{o}es abertos, n\~{a}o impedem a sua utiliza\c{c}\~{a}o devido a restri\c{c}\~{o}es de licen\c{c}a.
+Nesta se\c{c}\~{a}o descrevemos as principais linguagens de marca\c{c}\~{a}o de conte\'{u}do para web dispon\'{\i}veis atualmente.
+
+\subsection{HTML}
+Das p\'{a}ginas simples, \`{a}s mais avan\c{c}adas, possuem a maior parte de sua codifica\c{c}\~{a}o em HTML, a linguagem de marca\c{c}\~{a}o essencial para o funcionamento da Web. Como j\'{a} mencionado, sua primeira vers\~{a}o surgiu em 1990, junto com a disponibiliza\c{c}\~{a}o da WWW ao p\'{u}blico. \'{E} uma linguagem derivada do \sigla{SGML}{Standard Generalized Markup Language} \textit{Standard Generalized Markup Language} (SGML) utilizada para publicar informa\c{c}\~{a}o globalmente. Por isso \'{e} necess\'{a}rio que tanto autores quanto vendedores de p\'{a}ginas web compartilhem as mesmas conven\c{c}\~{o}es para o HTML. Entretanto, esse consenso n\~{a}o \'{e} simples de ser atingido, o que pode ser exemplificado pela n\~{a}o ado\c{c}\~{a}o do HTML 3.0, durante a guerra dos \textit{browsers}, visto que um consenso entre as empresas interessadas nunca acontecia \cite{HTML401}.
+
+A linguagem foi popularizada com a cria\c{c}\~{a}o do \textit{browser} Mosaic, e teve sua segunda vers\~{a}o especificada como um padr\~{a}o da \sigla{IETF}{Internet Engineering Task Force} \textit{Internet Engineering Task Force} (IETF) \cite{HTML2}. Como j\'{a} mencionado, o HTML 3.0 nunca foi lan\c{c}ado como um padr\~{a}o web, devido \`{a} falta de consenso. Apenas a vers\~{a}o 3.2 atingiu esse estado, entretanto n\~{a}o foi de grande representatividade, devido a tecnologias propriet\'{a}rias presentes na especifica\c{c}\~{a}o e a baixa ado\c{c}\~{a}o dos padr\~{o}es web na \'{e}poca \cite{HTML401}.
+
+Atualmente o HTML se encontra na vers\~{a}o 4.1, publicada pelo W3C como uma recomenda\c{c}\~{a}o em 1999 estendendo a vers\~{a}o 4.0. A partir dessa vers\~{a}o foi poss\'{\i}vel adicionar folhas de estilo, \textit{scripts}, \textit{frames}, melhor suporte a texto com dire\c{c}\~{o}es diferenciadas, tabelas mais ricas, melhorias em formul\'{a}rios, maior suporte a internacionaliza\c{c}\~{a}o e melhorias na parte de acessibilidade para pessoas com defici\^{e}ncias \cite{HTML401}.
+
+Encontra-se em desenvolvimento a nova vers\~{a}o do HTML, que chegar\'{a} \`{a} sua vers\~{a}o 5. Atualmente ele se encontra em est\'{a}gio de \textit{Working Draft}, e possui como um dos pilares de desenvolvimento a interoperabilidade definindo uma conformidade clara para os agentes de usu\'{a}rio \cite{HTML5}.
+
+\subsection{XML}
+Apesar do HTML ser uma linguagem muito \'{u}til, ele possui um conjunto de regras muito restrito e com um objetivo bastante espec\'{\i}fico. Surgiu a necessidade de criar documentos de maneira semelhante, entretanto de maneira mais aberta, permitindo publicar documentos mais espec\'{\i}ficos e em larga escala. Devido a essa necessidade surgiu o \sigla{XML}{eXtensible Markup Language} \textit{eXtensible Markup Language} (XML), tamb\'{e}m derivado do SGML. Entretanto, devido a sua grande portabilidade, o XML tamb\'{e}m \'{e} largamente utilizado como uma ferramenta para fornecer interoperabilidade, visto que pode ser utilizado para troca de dados em qualquer ambiente. Sua primeira vers\~{a}o recomendada surgiu em 1998, e atualmente encontra-se na vers\~{a}o 1.1 (Fourth Edition). O XML fornece um mecanismo para impor restri\c{c}\~{o}es sobre o \textit{layout} de armazenamento e estrutura l\'{o}gica \cite{Bray2006}.
+
+Os objetivos a serem alcan\c{c}ados durante seu desenvolvimento eram:
+\begin{itemize}
+ \item Ser diretamente utilizado na Web;
+ \item Suportar uma grande variedade de aplica\c{c}\~{o}es;
+ \item Compatibilidade com o SGML;
+ \item Ser f\'{a}cil de escrever programas que interpretem o XML;
+ \item Recursos adicionais deveriam ser minimizados, idealmente nenhum;
+ \item Possibilidade de leitura e compreens\~{a}o por humanos com clareza;
+ \item O projeto do XML deve ser feito rapidamente, formal e conciso;
+ \item Documentos XML devem ser f\'{a}ceis de criar;
+ \item Marca\c{c}\~{o}es concisas s\~{a}o de import\^{a}ncia m\'{\i}nima.
+\end{itemize}
+Neste ano, comemora-se os 10 anos de lan\c{c}amento da vers\~{a}o inicial do XML, que obteve um grande sucesso, visto que \'{e} largamente utilizado em diversos tipos de aplica\c{c}\~{o}es, al\'{e}m de ser a base para diversas outras linguagens de grande import\^{a}ncia, como MathML, XHTML, SOAP, entre outras. Suas linguagens derivadas proporcionam uma maneira otimizada de utiliza\c{c}\~{a}o do XML em campos mais espec\'{\i}ficos.
+
+Todo o potencial do XML foi atingido com o lan\c{c}amento da recomenda\c{c}\~{a}o do XML Schema em 2001, uma linguagem de marca\c{c}\~{a}o para defini\c{c}\~{a}o de regras de forma\c{c}\~{a}o de documentos XML. As constru\c{c}\~{o}es s\~{a}o utilizadas para restringir e documentar o significado, relacionamentos e as partes constituintes de um documento XML. Ou seja, o XML Schema pode ser utilizado para definir, descrever e catalogar vocabul\'{a}rios XML para classes de documentos XML \cite{McQueen2008}.
+
+\subsection{XHTML}
+O \sigla{XHTML}{eXtensible HyperText Markup Language} \textit{eXtensible HyperText Markup Language} \'{e} uma reformula\c{c}\~{a}o do HTML em XML, e de suas tr\^{e}s \sigla{DTD}{Document Type Definitions} \textit{Document Type Definitions} (DTD), que possuem as defini\c{c}\~{o}es da linguagem HTML 4.0, visto que o XHTML 1.x \'{e} derivado da \'{u}ltima vers\~{a}o do HTML. Esses documentos s\~{a}o desenvolvidos para trabalhar em conjunto com agentes de usu\'{a}rio\footnote{http://en.wikipedia.org/wiki/User\_agent} baseados em tecnologias XML. Ele pretende ser utilizado como linguagem para conte\'{u}do que esteja em conformidade tanto com XML, e se simples guias forem seguidos, operar em conformidade com HTML 4 em agentes de usu\'{a}rio. Os benef\'{\i}cios ao se utilizar o XHTML s\~{a}o:
+\begin{itemize}
+ \item Documentos XHTML s\~{a}o documentos em conformidade com XML. Dessa maneira, eles s\~{a}o rapidamente lidos, editados, e validados com ferramentas padr\~{a}o XML;
+ \item Documentos XHTML podem ser escritos para operar como ou melhor do que era obtido anteriormente com agentes de usu\'{a}rio HTML 4;
+ \item Documentos XHTML podem utilizar aplica\c{c}\~{o}es que s\~{a}o invocadas no HTML \textit{Document Object Model} ou XML \sigla{DOM}{Document Objetc Model} \textit{Document Objetc Model} (DOM);
+ \item Como a fam\'{\i}lia do XHTML evolui, documentos em conformidade com XHTML ir\~{a}o ser mais interoper\'{a}veis dentro dos e entre v\'{a}rios ambientes XHTML.
+\end{itemize}
+A necessidade de se utilizar XHTML existe pois \'{e} mais simples adicionar novos elementos a documentos XML e tamb\'{e}m ao se pensar em interoperabilidade entre os diferentes agentes de usu\'{a}rio, mais facilmente alcan\c{c}\'{a}vel com XML, que j\'{a} provou ser uma grande ferramenta no aux\'{\i}lio \`{a} interoperabilidade \cite{XHTML1}.
+
+O XHTML foi publicado como recomenda\c{c}\~{a}o em 2000, e atualmente possui a vers\~{a}o 1.1 em estado de \textit{Working Draft} no W3C \cite{XHTML11}. Tamb\'{e}m est\'{a} sendo desenvolvida em paralelo uma nova vers\~{a}o, a XHTML 2.0, que tamb\'{e}m se encontra no estado de \textit{Working Draft}. Essa vers\~{a}o pretende ser a mais gen\'{e}rica poss\'{\i}vel em termos de XML; ter mais estruturas de conte\'{u}do, menos de apresenta\c{c}\~{a}o; oferecer maior usabilidade e acessibilidade; melhor suporte a internacionaliza\c{c}\~{a}o; maior independ\^{e}ncia de dispositivo; menor utiliza\c{c}\~{a}o de \textit{scripts} e integra\c{c}\~{a}o com Web Sem\^{a}ntica. XHTML 2.0 essencialmente consiste em empacotar diversas partes que atualmente s\~{a}o independentes, mas est\~{a}o em processo de recomenda\c{c}\~{a}o \cite{XHTML2}:
+
+\begin{itemize}
+ \item RDFa; \sigla{RDFa}{Resource Description Framework - in - attributes}
+ \item XForms;
+ \item Access;
+ \item Role;
+ \item XML Events.
+\end{itemize}
+
+\'{E} interessante notar que n\~{a}o existe uma conformidade da vers\~{a}o 5 do HTML com a vers\~{a}o 2 do XHTML, sendo as duas linguagens distintas para defini\c{c}\~{a}o de documentos de apresenta\c{c}\~{a}o na Web. Ambos padr\~{o}es est\~{a}o em fase de desenvolvimento, possuem abordagens diferentes e coexistem, e desde j\'{a} est\~{a}o em busca de p\'{u}blico \cite{HTML5vsXHTML2}. Essa quest\~{a}o \'{e} algo contradit\'{o}rio, pois nem mesmo o org\~{a}o que regulamenta os padr\~{o}es web trabalha com apenas um padr\~{a}o para a pr\'{o}xima vers\~{a}o do (X)HTML, o que pode gerar resultados como os que aconteciam nos anos onde apesar de existir padr\~{o}es, n\~{a}o havia a sua utiliza\c{c}\~{a}o.
+
+\subsection{Um antigo problema volta a aparecer}
+Devido \`{a} descentraliza\c{c}\~{a}o, a facilidade de publica\c{c}\~{a}o e simplicidade, o n\'{u}mero de informa\c{c}\~{o}es dispon\'{\i}veis \textit{online} cresceu rapidamente. Isso trouxe possibilidades excitantes para acesso \`{a} informa\c{c}\~{a}o e com\'{e}rcio eletr\^{o}nico, por exemplo \cite{Fensel2003}. Apesar do projeto original da web tentar solucionar um problema de localiza\c{c}\~{a}o de informa\c{c}\~{a}o, o mesmo problema voltou a surgir devido \`{a}s caracter\'{\i}sticas da pr\'{o}pria web. Entretanto, o problema possu\'{\i}a um agravante: muitas vezes a informa\c{c}\~{a}o encontrada n\~{a}o era confi\'{a}vel ou era irrelevante. O usu\'{a}rio \'{e} que deveria filtrar as informa\c{c}\~{o}es de um documento para descobrir se realmente tratava de um assunto de seu interesse.
+
+Essa tarefa \'{e} frustante, pois, na maioria dos casos, necessita-se da informa\c{c}\~{a}o de maneira r\'{a}pida, sendo o processo de filtragem de dados um tempo desperdi\c{c}ado. Por que um computador n\~{a}o pode realizar essa tarefa? Esse problema pode ser ilustrado atrav\'{e}s do mais cl\'{a}ssico exemplo, os mecanismos de busca. Mesmo com as v\'{a}rias melhorias em seus algoritmos, continuam a retornar resultados com baixa precis\~{a}o, baixa sensibilidade ao vocabul\'{a}rio e resultados individuais de p\'{a}ginas \cite{Breitman2005}.
+
+Foi ent\~{a}o que come\c{c}aram as atividades para descri\c{c}\~{a}o das informa\c{c}\~{o}es dispon\'{\i}veis na web, ou informa\c{c}\~{a}o sobre a informa\c{c}\~{a}o.
+
+A solu\c{c}\~{a}o encontrada foi a utiliza\c{c}\~{a}o de Metadados. Atrav\'{e}s deles, \'{e} poss\'{\i}vel a um computador encontrar a informa\c{c}\~{a}o e process\'{a}-la, ou ent\~{a}o ao encontr\'{a}-los \'{e} poss\'{\i}vel compreender de que assunto trata um determinado recurso \cite{Breitman2005}. Um grupo respons\'{a}vel por Metadados foi criado pelo W3C, entratanto, ele rapidamente foi substitu\'{\i}do por um grupo chamado \textit{Semantic Web Activity} \cite{Metadata}.
+
+\subsection{Web Sem\^{a}ntica}
+Metadados formam a base para uma web mais inteligente e confi\'{a}vel, prevista desde seu projeto original, mas ainda indispon\'{\i}vel. Ela se tornou poss\'{\i}vel a partir do momento que o XML e o XML Schema se tornaram linguagens maduras e amplamente difundidas. O \textit{Semantic Web Activity} \'{e} o grupo de trabalho respons\'{a}vel pela Web Sem\^{a}ntica. Ela fornece um \textit{framework} comum permitindo que dados sejam compartilhados e reutilizados em toda aplica\c{c}\~{a}o, empresa e comunidade \cite{SemanticWeb}.
+
+A Web Sem\^{a}ntica \'{e} a Web dos dados, que atualmente s\~{a}o controlados pelas aplica\c{c}\~{o}es, cada uma mantendo seus pr\'{o}prios. A Web Sem\^{a}ntica trata de dois pontos \cite{SemanticWeb}:
+\begin{itemize}
+ \item Formatos comuns para integra\c{c}\~{a}o e combina\c{c}\~{a}o de dados retirados de diversas fontes, onde a web original concentra-se principalmente na troca de documentos.
+ \item Tamb\'{e}m trata de uma linguagem para gravar como os dados se relacionam com objetos do mundo real.
+Isso permite a uma pessoa ou m\'{a}quina, iniciar num banco de dados e ent\~{a}o se mover atrav\'{e}s de um conjunto de bancos de dados conectados n\~{a}o por fios, mas por possu\'{\i}rem o mesmo conceito.
+\end{itemize}
+
+A Web Sem\^{a}ntica \'{e} tida como solu\c{c}\~{a}o para os problemas que enfrentamos na Web atual, como será abordado no cap\'{\i}tulo \ref{capitulo2}.

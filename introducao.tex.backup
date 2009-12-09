@@ -1,0 +1,46 @@
+\chapter*{Introdução}
+
+Desde o ano 2000, o instituto Sans de segurança, em conjunto com o National Infrastructure Protection Center (NIPC), pertencente ao FBI, vem compilando uma lista com as ameaças mais recorrentes aos computadores interconectados em rede, especialmente à Internet. A primeira lista fora classificada como \textit{``As dez vulnerabilidades de Internet mais críticas''} \cite{Top10Sans}, sendo expandida durante os anos seguintes para \textit{``Os vinte maiores problemas, ameaças e riscos da Internet''} \cite{Top20Sans}. Os esforços por parte de seus responsáveis, vêm sendo direcionados até os dias de hoje no intuito cobrir os pontos mais frágeis e comuns aos ambientes interconectados em rede.
+
+Dentre tais ameaças, podem ser ressaltadas como mais marcantes, as que se relacionam aos seguintes tópicos:
+
+\begin{itemize}
+    \item Sistemas operacionais podem apresentar algumas falhas que uma vez exploradas, podem acarretar na distribuição massiva de \textit{worms} em sistemas conectados à Internet.
+    \item Falhas são frequentemente encontradas em aplicações-cliente, tais como navegadores, ferramentas pertencentes à suites \textit{Office} e reprodutores de mídia. Uma vez exploradas, podem levar à corrupção do sistema hospedeiro.
+    \item Funcionários de corporações e instituições com acesso à Internet estão expostos à diversos riscos oferecidos por páginas da \textit{WWW}, \textit{World Wide Web}, \sigla{WWW}{World Wide Web} maliciosamente manipuladas, sendo a porta de entrada para \textit{malwares} nas redes privadas.
+    \item Falhas encontradas tanto em sistemas \textit{Web open-source} quanto em sistemas \textit{Web} proprietários, podem conduzir à transformação de sites confiáveis em versões manipuladas maliciosamente pelos atacantes.
+    \item Muitas configurações-padrão de sistemas operacionais e serviços permitem que tais características sejam exploradas, sendo comprometidos via ataques de força-bruta baseados em dicionários.
+    \item Os interessados em atacar as instituições, obtém informações sensíveis via métodos cada vez mais inovadores, sendo uma tarefa essencial, que se estabeleça um controle mais aguçado de como as informações deixam os limites das organizações.
+\end{itemize}
+
+Neste trabalho, será abordada uma forma de ameaça específica relacionada aos ataques de força-bruta, os ataques de dicionário contra servidores baseados na família \textit{Unix} e que possuem o serviço \textit{SSH} rodando.
+
+Tais ataques são promovidos com o auxílio de ferramentas automatizadas, que utilizam um conjunto de combinações de usuários e senhas comuns, catalogados em arquivos chamados  \textit{dicionários}. Quando reincidentes, essas tentativas são armazenadas em forma de \textit{logs} nos servidores.
+
+Observando a importância desta abordagem, proveniente de indivíduos mal-intencionados, foi desenvolvida de uma ferramenta \textit{Web}, capaz de gerar relatórios que identifiquem as tentativas de acesso negadas, para uma posterior melhoria nos filtros de \textit{firewall} presentes nos servidores.
+
+Os capítulos apresentados neste trabalho, cobrem os fundamentos teóricos e práticos sobre a problemática envolvida, assim como a implementação da ferramenta que auxilia em sua resolução:
+
+\begin{itemize}
+    \item \textit{Capítulo 1}: descreve ataques de dicionário, empregados contra os servidores que rodam o serviço \textit{SSH}.
+    \item \textit{Capítulo 2}: apresenta a ferramenta proposta, em conjunto como seus aspectos tecnológicos.
+    \item \textit{Capítulo 3}: mostra a engenharia empregada no desenvolvimento do software.
+\end{itemize}
+
+\sigla{AUP}{Agile Unified Process}
+\sigla{CLI}{Command Line Interface}
+\sigla{CeWL}{Custom Word List generator}
+\sigla{CSS}{Cascading Style Sheet}
+\sigla{FBI}{Federal Bureau of Investigation}
+\sigla{GNU}{GNU Not Unix}
+\sigla{HTML}{Hypertext Markup Language}
+\sigla{HTTP}{Hypertext Transfer Protocol}
+\sigla{IP}{Internet Protocol}
+\sigla{MVC}{Model View Controller}
+\sigla{NIPC}{National Infrastructure Protection Center}
+\sigla{PHP}{PHP: Hypertext Preprocessor}
+\sigla{RUP}{Rational Unified Process}
+\sigla{SGBD}{Sistema Gerenciador de Banco de Dados}
+\sigla{SSH}{Secure SHell}
+\sigla{URL}{Uniform Resource Locator}
+\sigla{XML}{Extensible Markup Language}

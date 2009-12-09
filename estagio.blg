@@ -1,0 +1,67 @@
+This is BibTeX, Version 0.99c (Web2C 7.5.4)
+The top-level auxiliary file: estagio.aux
+A level-1 auxiliary file: capa.aux
+A level-1 auxiliary file: folharosto.aux
+A level-1 auxiliary file: folhaaprovacao.aux
+A level-1 auxiliary file: dedicatoria.aux
+A level-1 auxiliary file: agradecimentos.aux
+A level-1 auxiliary file: epigrafe.aux
+A level-1 auxiliary file: resumo.aux
+A level-1 auxiliary file: abstract.aux
+A level-1 auxiliary file: introducao.aux
+A level-1 auxiliary file: capitulos/1_ataques_servidores.aux
+A level-1 auxiliary file: capitulos/2_ferramenta_cll.aux
+A level-1 auxiliary file: capitulos/3_engenharia_sw.aux
+A level-1 auxiliary file: conclusao.aux
+The style file: abnt-alf.bst
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Database file #1: abnt-options.bib
+Database file #2: bibliografia.bib
+Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
++---------------------------------------------------------+
+| Estilo bibliografico abnt-alf.bst versao 1.52           |
+| Implementa a NBR6023, NBR10520 e NBR10523               |
+| Em caso de duvidas ou problemas com este estilo procure |
+| http://abntex.codigolivre.org.br                        |
++---------------------------------------------------------+
+You've used 16 entries,
+            6523 wiz_defined-function locations,
+            1246 strings with 11566 characters,
+and the built_in function-call counts, 21382 in all, are:
+= -- 3022
+> -- 180
+< -- 579
++ -- 701
+- -- 57
+* -- 1061
+:= -- 2254
+add.period$ -- 34
+call.type$ -- 20
+change.case$ -- 93
+chr.to.int$ -- 21
+cite$ -- 8
+duplicate$ -- 2522
+empty$ -- 857
+format.name$ -- 261
+if$ -- 4431
+int.to.chr$ -- 7
+int.to.str$ -- 3
+missing$ -- 201
+newline$ -- 48
+num.names$ -- 35
+pop$ -- 236
+preamble$ -- 1
+purify$ -- 54
+quote$ -- 0
+skip$ -- 3052
+stack$ -- 1
+substring$ -- 775
+swap$ -- 657
+text.length$ -- 14
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 8
+warning$ -- 0
+while$ -- 59
+width$ -- 0
+write$ -- 130
