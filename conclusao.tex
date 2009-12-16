@@ -1,7 +1,22 @@
 \chapter*{Conclusão}
 
-Foi apresentada a ferramenta chamada \textit{Crickets' little leg}, concebida no intuito de auxiliar os administradores de sistemas baseados em famílias \textit{Unix}, a verificarem quais são os endereços de \textit{IP} provenientes de seus atacantes, assim como a data dos incidentes, existindo a possibilidade de terem como resultado, regras de \textit{Iptables}, capazes de se integrar aos \textit{Kernels} de seus Sistemas Operacionais e com isso, bloquearem o acesso não-autorizado aos indivíduos que fazem uso mal intencionado do serviço provido.
+Foi apresentada neste trabalho a ferramenta \textit{Crickets' little leg}, concebida no intuito de auxiliar os administradores de sistemas baseados em famílias \textit{Unix} a identificar informações sobre ataques de dicionários lançados contra o serviço \textit{SSH}, a partir dos \textit{logs} registrados. Através de uma interface \textit{Web} simples e intuitiva, as seguintes informações são recuperadas:
 
-Seu desenvolvimento foi guiado no intuito de gerar uma ferramenta que fosse extremamente simples e que atendesse a demanda da maioria dos ambientes onde se encontram hospedadas aplicações \textit{Web}, não exigindo assim, requisitos adicionais capazes de inviabilizar sua implantação.
+\begin{singlespace}
+    \begin{itemize}
+        \item Os endereços de \textit{IP} dos responsáveis pelos ataques
+        \item Os horários em que os ataques ocorreram
+        \item Os países de onde foram lançados os ataques
+    \end{itemize}
+\end{singlespace}
 
-Como trabalhos futuros, a ferramenta poderá agregar mais análises, relativas a diferentes formas de ataques, bastando que sua configuração seja modificada e mais módulos sejam programados, integrando-se facilmente ao modelo \textit{MVC} empregado no seu projeto.
+Além do processo de extração de informações, a ferramenta permite a geração automática de regras para \textit{Iptables}, que uma vez aplicadas nos servidores, bloqueiam efetivamente os pacotes de rede provenientes dos enderços de \textit{IP} considerados suspeitos.
+
+A ferramenta foi desenvolvida no intuito de atender a demanda da maioria dos ambientes onde se pode hospedadar aplicações \textit{Web}, não exigindo assim, requisitos adicionais, que por ventura possam inviabilizar sua implantação.
+
+Como trabalhos futuros, a ferramenta poderá:
+
+\begin{itemize}
+    \item Agregar análises relacionadas a diferentes formas de ataque, como por exemplo, a identificação de ataques \textit{DoS} específicos, bastando que sua configuração seja modificada e seus módulos sejam programados, se integrando facilmente ao modelo \textit{MVC} empregado na arquitetura do projeto.
+    \item Oferecer suporte um banco de dados de localidades ainda mais específicas, revelando não somente os países cujos ataques foram lançados, mas também, as cidades de onde estes partiram.
+\end{itemize}

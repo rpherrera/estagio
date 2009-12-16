@@ -17,6 +17,8 @@
 \usepackage{scalefnt}
 \usepackage{breakurl}
 \usepackage{float}
+\usepackage{hyphenat}
+\usepackage{lscape}
 
 \counterwithout{footnote}{chapter}
 \counterwithout{table}{chapter}
@@ -37,7 +39,6 @@
     \include{resumo}
     \include{abstract}
     \sumario
-    %\include{./listasiglas}
     \ProximoForaDoSumario
     \listadefiguras
     \cleardoublepage
@@ -47,11 +48,12 @@
     \cleardoublepage
     \listadesiglas
     \cleardoublepage
-    %\listoftables
     \include{introducao}
     \include{capitulos/1_ataques_servidores}
     \include{capitulos/2_ferramenta_cll}
     \include{capitulos/3_engenharia_sw}
     \include{conclusao}
     \bibliography{bibliografia}
+    \anexo
+    \include{log_filtrado}
 \end{document}

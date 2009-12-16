@@ -36,12 +36,12 @@ order=-1
 
 [item:bibliografia.bib]
 archive=true
-column=6449506
-encoding=
-highlight=
-line=0
-open=false
-order=-1
+column=1
+encoding=UTF-8
+highlight=BibTeX
+line=99
+open=true
+order=1
 
 [item:capa.tex]
 archive=true
@@ -52,32 +52,32 @@ line=0
 open=false
 order=-1
 
-[item:capitulos/1_ameacas.tex]
+[item:capitulos/1_ataques_servidores.tex]
 archive=true
-column=32
+column=164
 encoding=UTF-8
 highlight=LaTeX
-line=2
+line=10
 open=false
-order=-1
+order=2
 
 [item:capitulos/2_ferramenta_cll.tex]
 archive=true
-column=394
+column=0
 encoding=UTF-8
 highlight=LaTeX
-line=46
+line=204
 open=true
-order=1
+order=2
 
 [item:capitulos/3_engenharia_sw.tex]
 archive=true
-column=0
-encoding=
-highlight=
-line=0
-open=false
-order=-1
+column=41
+encoding=UTF-8
+highlight=LaTeX
+line=59
+open=true
+order=3
 
 [item:conclusao.tex]
 archive=true
@@ -117,10 +117,10 @@ order=-1
 
 [item:estagio.tex]
 archive=true
-column=0
+column=14
 encoding=UTF-8
 highlight=LaTeX
-line=18
+line=36
 open=true
 order=0
 
@@ -144,12 +144,21 @@ order=-1
 
 [item:introducao.tex]
 archive=true
-column=166592632
-encoding=
-highlight=
-line=0
+column=34
+encoding=UTF-8
+highlight=LaTeX
+line=32
 open=false
-order=-1
+order=3
+
+[item:log_filtrado.tex]
+archive=true
+column=114
+encoding=UTF-8
+highlight=LaTeX
+line=37
+open=true
+order=4
 
 [item:resumo.tex]
 archive=true

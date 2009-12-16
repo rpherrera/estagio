@@ -5,6 +5,23 @@
 \providecommand{\abntbstabout}[1]{}
 \abntbstabout{1.52 }
 
+\bibitem[Ab 2004]{MySQLreference}
+\abntrefinfo{Ab}{AB}{2004}
+{AB, M. \emph{MySQL Reference Manual}: Mysql ab table and history of mysql.
+  2004.}
+
+\bibitem[Albing \textit{et al.} 2004]{php5PowerProgramming}
+\abntrefinfo{Albing \textit{et al.}}{ALBING \textit{et al.}}{2004}
+{ALBING, C. \textit{et al.} \emph{PHP 5 Power Programming}. Setembro 2004.}
+
+\bibitem[Amber 2009]{ProgrammingLanguages}
+\abntrefinfo{Amber}{AMBER}{2009}
+{AMBER, S.~W. \emph{The Agile Unified Process (AUP)}. 2009.
+\url{http://www.ambysoft.com/unifiedprocess/agileUP.html}.
+Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$http:\-/\-/www\-.ambysoft\-.com\-/unifiedprocess\-/agi%
+leUP\-.html$>$}{http://www.ambysoft.com/unifiedprocess/agileUP.html}.}
+
 \bibitem[Franks \textit{et al.} 1999]{BasicAuth}
 \abntrefinfo{Franks \textit{et al.}}{FRANKS \textit{et al.}}{1999}
 {FRANKS, J. \textit{et al.} \emph{HTTP Authentication: Basic and Digest Access
@@ -50,6 +67,15 @@ Dispon{\'\i}vel em:
 {PROVOS, N. \textit{et al.} Preventing privilege escalation. In:
   \emph{SSYM'03: Proceedings of the 12th conference on USENIX Security
   Symposium}. Berkeley, CA, USA: USENIX Association, 2003. p. 16--16.}
+
+\bibitem[Reenskaug 2003]{MVC}
+\abntrefinfo{Reenskaug}{REENSKAUG}{2003}
+{REENSKAUG, T. The model-view-controller (mvc). In:  \emph{Its Past and
+  Present}. [s.n.], 2003. Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$http:\-/\-/heim\-.ifi\-.uio\-.no\-/\~{}trygver\-/2003\%
+-/javazone-jaoo\-/MVC\underline{\
+  }pattern\-.pdf$>$}{http://heim.ifi.uio.no/~trygver/2003/javazone-jaoo/MVC_pa%
+ttern.pdf}.}
 
 \bibitem[TIOBE Programming Community Index for November 2009 2009]{Languages}
 \abntrefinfo{TIOBE\ldots}{TIOBE\ldots}{2009}

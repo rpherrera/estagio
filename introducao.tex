@@ -13,26 +13,29 @@ Dentre tais ameaças, podem ser ressaltadas como mais marcantes, as que se relac
     \item Os interessados em atacar as instituições, obtém informações sensíveis via métodos cada vez mais inovadores, sendo uma tarefa essencial, que se estabeleça um controle mais aguçado de como as informações deixam os limites das organizações.
 \end{itemize}
 
-Neste trabalho, será abordada uma forma de ameaça específica relacionada aos ataques de força-bruta, os ataques de dicionário contra servidores baseados na família \textit{Unix} e que possuem o serviço \textit{SSH} rodando.
+Neste trabalho, será abordada uma forma de ameaça específica relacionada aos ataques de força-bruta, são os ataques de dicionário contra servidores baseados na família \textit{Unix} e que possuem o serviço \textit{SSH} rodando.
 
 Tais ataques são promovidos com o auxílio de ferramentas automatizadas, que utilizam um conjunto de combinações de usuários e senhas comuns, catalogados em arquivos chamados  \textit{dicionários}. Quando reincidentes, essas tentativas são armazenadas em forma de \textit{logs} nos servidores.
 
 Observando a importância desta forma de ataque, foi proposto como estágio, o desenvolvimento de uma ferramenta \textit{Web}, capaz de gerar relatórios que identifiquem as tentativas de acesso que foram negadas ao serviço \textit{SSH}. A partir da análise dos dados identificados pela ferramenta, pode-se realizar uma melhoria nos filtros de \textit{firewall} presentes nos servidores, através da elaboração de regras específicas de \textit{Iptables}.
 
-Este trabalho cobre os fundamentos teóricos e práticos sobre a problemática envolvida, assim como a implementação da ferramenta que auxilia em sua resolução, tendo seus capítulos divididos da seguinte maneira:
+Este trabalho cobre os fundamentos teóricos e práticos sobre a problemática envolvida, assim como a implementação de uma ferramenta \textit{Web} que busca por tentativas não autorizadas de acesso ao serviço SSH em servidores, a partir da análise de seus logs gerados, auxiliando a resolução deste problemas através da geração automática de um conjunto de regras para \textit{Iptables}, que podem ser utilizadas para bloquear futuras tentativas de acesso por parte dos atacantes. Os capítulos são divididos da seguinte maneira:
 
 \begin{itemize}
-    \item \textit{Capítulo 1}: descreve ataques de dicionário, empregados contra os servidores que rodam o serviço \textit{SSH}.
-    \item \textit{Capítulo 2}: apresenta a ferramenta proposta, em conjunto como seus aspectos tecnológicos.
-    \item \textit{Capítulo 3}: mostra a engenharia empregada no desenvolvimento do software.
+    \item \textit{Capítulo 1}: Descreve os ataques de dicionário, empregados contra os servidores da família \textit{Unix} e que rodam o serviço \textit{SSH}. Exemplifica este problema a partir do lançamento de um ataque bem sucedido contra o \textit{host} local, preparado propositalmente para o teste. Introduz a idéia de se ter uma ferramenta capaz de analisar os logs gerados a partir dessa modalidade de ataques.
+    \item \textit{Capítulo 2}: Apresenta a ferramenta que fora idealizada no Capítulo \ref{1_ataques_servidores}. Mostra um levantamento sobre a popularidade das tecnologias utilizadas em servidores \textit{Web}, justificando a influencia que exerceram sobre o processo de criação da ferramenta. Exemplifica sua utilização e aborda suas características.
+    \item \textit{Capítulo 3}: Mostra a engenharia empregada no desenvolvimento do software e aborda aspectos sobre a metodologia de desenvolvimento utilizada.
 \end{itemize}
 
+\sigla{API}{Application Programming Interface}
 \sigla{AUP}{Agile Unified Process}
 \sigla{CLI}{Command Line Interface}
 \sigla{CeWL}{Custom Word List generator}
 \sigla{CSS}{Cascading Style Sheet}
+\sigla{DoS}{Denial of Service}
 \sigla{FBI}{Federal Bureau of Investigation}
 \sigla{GNU}{GNU Not Unix}
+\sigla{LGPL}{Lesser General Public License}
 \sigla{HTML}{Hypertext Markup Language}
 \sigla{HTTP}{Hypertext Transfer Protocol}
 \sigla{IP}{Internet Protocol}

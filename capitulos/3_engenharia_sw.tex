@@ -4,17 +4,17 @@
 
 Para o desenvolvimento do \textit{Crickets' little leg}, foi adotada a metodologia \textit{AUP} de Desenvolvimento. Sendo altamente recomendada para pequenos projetos e que envolvam uma pequena quantidade de desenvolvedores.
 
-A \textit{AUP}, ou \textit{Agile Unified\textit{ Process} é uma versão simplificada da IBM Rational Unified Process} (\textit{RUP}), desenvolvida por \textit{Scott Ambler}\footnote{Página oficial da AUP disponível em \url{http://www.ambysoft.com/unifiedprocess/agileUP.html}}. Descreve uma abordagem simples de se entender o desenvolvimento de aplicações, utilizando técnicas ágeis e conceitos remanescentes da natureza encontrada em seu predecessor, o \textit{RUP}. São encontradas nessa metodologia, técnicas como o desenvolvimento orientado a testes\footnote{\textit{Test Driven Development}, ou \textit{TDD}.}, modelagem ágil, gerência ágil e refatoração de base de dados no intuito de se melhorar a produtividade.
+A \textit{AUP}, ou \textit{Agile Unified\textit{ Process} é uma versão simplificada da IBM Rational Unified Process} (\textit{RUP}), desenvolvida por \textit{Scott Ambler} \footnote{Página oficial da \textit{AUP} disponível em \url{http://www.ambysoft.com/unifiedprocess/agileUP.html}}. Descreve uma abordagem simples de se entender o desenvolvimento de aplicações, utilizando técnicas ágeis e conceitos remanescentes da natureza encontrada em seu predecessor, o \textit{RUP}. São encontradas nessa metodologia, técnicas como o desenvolvimento orientado a testes \footnote{\textit{Test Driven Development}, ou \textit{TDD}.}, modelagem ágil, gerência ágil e refatoração de base de dados no intuito de se melhorar a produtividade.
 
 \section{Ciclo de vida}
 
-A disciplina \textit{Modelo}, engloba o modelo de negócios encontrado na modelagem \textit{RUP}, assim como as disciplinas de \textit{Requisitos}, \textit{Análise} e \textit{Projeto}. O \textit{Modelo} é uma parte importante da \textit{AUP}, mas não domina o processo como um todo, pois parte da premissa de que devem ser gerados somente os modelos e documentos que sejam suficientemente necessários. As disciplinas de \textit{Configuração} e \textit{Mudança na Gerência} são suprimidas em favor da disciplina Gerência de Configuração. No processo de desenvolvimento ágil, as atividades de \textit{Mudanças na Gerência} são partes típicas dos requisitos de \textit{Gerenciamento de Esforço}, sendo parte da disciplina \textit{Modelo}. Esta linha de pensamento é ilustrada na figura seguinte:
+A disciplina \textit{Modelo}, engloba o modelo de negócios encontrado na modelagem \textit{RUP}, assim como as disciplinas de \textit{Requisitos}, \textit{Análise} e \textit{Projeto}. O \textit{Modelo} é uma parte importante da \textit{AUP}, mas não domina o processo como um todo, pois parte da premissa de que devem ser gerados somente os modelos e documentos que sejam suficientemente necessários. As disciplinas de \textit{Configuração} e \textit{Mudança na Gerência} são suprimidas em favor da disciplina Gerência de Configuração. No processo de desenvolvimento ágil, as atividades de \textit{Mudanças na Gerência} são partes típicas dos requisitos de \textit{Gerenciamento de Esforço} \cite{ProgrammingLanguages}, sendo parte da disciplina \textit{Modelo}. Esta linha de pensamento é ilustrada na figura \ref{figura:ciclo_AUP}:
 
 \begin{figure}[h]
     \begin{center}
         \includegraphics[scale=0.6]{./figuras/lifecycleAgileUP.png}
 
-        \caption{Ciclo de vida da \textit{AUP}.}
+        \caption{\label{figura:ciclo_AUP}Ciclo de vida da \textit{AUP}. \cite{ProgrammingLanguages}}
     \end{center}
 \end{figure}
 
@@ -47,52 +47,69 @@ Sobre as disciplinas envolvidas, temos sua descrição como:
 \end{itemize}
 
 \clearpage
-\section{Diagrama de Casos de Uso}
+\section{Diagramas de Casos de Uso}
 
-Os seguintes Diagramas de Casos de Uso foram elaborados, como parte auxiliar do projeto da ferramenta:
+Os Diagramas de Casos de Uso foram elaborados, como parte auxiliar do projeto da ferramenta, obedecendo aos requisitos funcionais e não-funcionais, compreendidos por todas as características da ferramenta, previamente apresentadas no capítulo \ref{2_ferramenta_cll}.
 
-\vspace{2.5 cm}
+O Diagrama de Caso de Uso relativo ao usuário, ilustrado pela figura \ref{figura:uc-usuario}, mostra quais tipos de interação que o usuário pode ter com a ferramenta.
 
 \begin{figure}[ht]
     \begin{center}
-        \includegraphics[scale=0.8]{./figuras/casoUsoUsuario.png}
+        \includegraphics[scale=0.4]{./figuras/uc-usuario.png}
 
-        \caption{Diagrama de Caso de Uso relativo ao usuário.}
+        \caption{\label{figura:uc-usuario}Diagrama de Caso de Uso relativo ao usuário.}
     \end{center}
 \end{figure}
 
-\vspace{2.5 cm}
+\clearpage
+Diagrama de Caso de Uso relativo ao \textit{Crickets' little leg}, ilustrado pela figura \ref{figura:uc-ccl}, mostra os requisitos não-funcionais aos quais a ferramenta encontra-se atrelada.
 
-\begin{figure}[hb]
+\begin{figure}[ht]
     \begin{center}
-        \includegraphics[scale=0.8]{./figuras/casoUsoCLL.png}
+        \includegraphics[scale=0.4]{./figuras/uc-ccl.png}
 
-        \caption{Diagrama de Caso de Uso relativo ao \textit{Crickets' little leg}.}
+        \caption{\label{figura:uc-ccl}Diagrama de Caso de Uso relativo ao \textit{Crickets' little leg}.}
     \end{center}
 \end{figure}
 
 \clearpage
 \section{Diagrama de classes}
 
-Os seguintes Diagramas de Classes foram elaborados, como parte auxiliar do projeto da ferramenta:
+Seguindo as convenções do design \textit{pattern MVC}, adotado como padrão pelo \textit{framework} de desenvolvimento \textit{CakePHP}, que fora utilizado para o desenvolvimento da ferramenta, foram elaboradas, de acordo com suas categorias enumeradas, as seguintes classes:
+
+\begin{singlespacing}
+\begin{enumerate}
+    \item Classe de Modelo
+        \begin{itemize}
+            \item \textit{Entry}
+        \end{itemize}
+    \item Classes de Controladores
+        \begin{itemize}
+            \item \textit{EntriesController}
+            \item \textit{PagesController}
+        \end{itemize}
+\end{enumerate}
+\end{singlespacing}
+
+Para as classes apresentadas, foi elaborado um Diagrama de Classes, ilustrado pela figura \ref{figura:dc-mvc}, como parte auxiliar no projeto da ferramenta. É importante atentar-se ao fato de que as classes apresentadas, têm como herança, classes advindas do \textit{framework CakePHP}. Desta maneira, tais superclasses tiveram seus atributos e métodos suprimidos no diagrama em questão.
 
 \begin{figure}[hc]
     \begin{center}
-        \includegraphics[scale=0.8]{./figuras/diagramaDeClasses.png}
+        \includegraphics[scale=0.4]{./figuras/dc-mvc.png}
 
-        \caption{Diagrama de Classes geral do \textit{Crickets' little leg}.}
+        \caption{\label{figura:dc-mvc}Diagrama de Classes geral do \textit{Crickets' little leg}.}
     \end{center}
 \end{figure}
 
 \clearpage
 \section{Modelo Entidade Relacionamento}
 
-O seguinte Modelo de Entidade Relacionamento, como parte auxiliar do projeto da ferramenta:
+O banco de dados da ferramenta é muito simples, tendo em vista que os únicos dados armazenados são os resultados das capturas obtidas, através da interpretação dos logs especificados pelo usuário. Todas as entradas, ficam armazenadas em uma tabela, chamada \textit{Entry}. Os países identificados em cada entrada, são armazenados na tabela \textit{Country}. Cada entrada, se relaciona com um país por meio da chave ``country\_id'', presente em \textit{Entry}, sendo correspondida em \textit{Country} por sua chave primária, ou simplesmente ``id''. O Modelo Entidade Relacionamento da ferramenta é ilustrado pela figura \ref{figura:er}:
 
 \begin{figure}[hc]
     \begin{center}
-        \includegraphics[scale=0.8]{./figuras/diagramaER.png}
+        \includegraphics[scale=0.5]{./figuras/er.png}
 
-        \caption{Modelo Entidade Relacionamento geral do \textit{Crickets' little leg}.}
+        \caption{\label{figura:er}Modelo Entidade Relacionamento geral do \textit{Crickets' little leg}.}
     \end{center}
 \end{figure}
