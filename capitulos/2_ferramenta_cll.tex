@@ -15,23 +15,19 @@ Como o público alvo que se deseja atingir são administradores que possuem sist
         Propósito & Tecnologia\\ [0.5ex]
         \hline
 
-        Sistema Operacional & Baseado em Família \textit{Unix}\\
+        Sistema Operacional & Família \textit{Unix}\\
 
-        Servidor \textit{Web} & \textit{Apache} \footnotemark[1]\\
+        Servidor \textit{Web} & \textit{Apache}\\
 
-        Servidor de Banco de dados & \textit{MySQL} \footnotemark[2]\\
+        Servidor de Banco de dados & \textit{MySQL}\\
 
-        Linguagem de \textit{Scripting} & \textit{PHP} \footnotemark[3]\\ [0.1ex]
+        Linguagem de \textit{Scripting} & \textit{PHP}\\ [0.1ex]
         \hline
     \end{tabular}
     \label{webapptech}
 \end{table}
 
-\footnotetext[1]{Servidor \textit{Web Apache} disponível na página do projeto \url{http://httpd.apache.org/}}
-\footnotetext[2]{Servidor de banco de dados \textit{MySQL} disponível na página do projeto \url{http://mysql.com/}}
-\footnotetext[3]{Interpretador de scripts \textit{PHP} disponível na página do projeto \url{http://php.net/}}
-
-É importante, também, que a ferramenta seja portável, de modo que sua implantação seja facilmente realizada em ambientes que atendam os requisitos tecnológicos básicos, levantados até então. Por isso, foi constatado que um bom \textit{framework} de desenvolvimento \textit{Web} que obedecesse este anseio devesse ser pesquisado. Para tanto, dentre os demais disponíveis no mercado, para a linguagem de \textit{scripting PHP}, o \textit{framework CakePHP} \footnote{Projeto CakePHP, disponível no site \url{http://cakephp.org/}} prevaleceu, pois tem como uma das características mais marcantes, a facilidade com que as aplicações são implantadas, não tendo exigência alguma quanto à modificações na estrutura padrão do Sistema Operacional, assim os administradores não precisam realizar operações custosas em seus sistemas, para suportar exclusivamente a ferramenta.
+É importante, também, que a ferramenta seja portável, de modo que sua implantação seja facilmente realizada em ambientes que atendam aos requisitos tecnológicos básicos levantados até então. Por isso, foi constatada a necessidade de se encontrar um bom \textit{framework} de desenvolvimento \textit{Web}, que atendesse a este anseio. Para a linguagem de \textit{scripting PHP} \cite{PHP}, o \textit{framework CakePHP} \cite{CakePHP} foi escolhido, pois tem como uma das características mais marcantes, a facilidade com que as aplicações são implantadas, não tendo exigência alguma quanto à modificações na estrutura padrão do Sistema Operacional, desta forma os administradores não precisam realizar operações custosas em seus sistemas para que a ferramenta seja suportada.
 
 
 \section{Tecnologias envolvidas}
@@ -42,11 +38,11 @@ Na busca por uma combinação ideal, foi necessário o entendimento sobre o ambi
 
 \subsection{Servidor Web}
 
-Como servidor \textit{Web}, foi escolhido o \textit{Apache}, devido sua popularidade e uso amplamente difundido entre a comunidade de desenvolvedores e administradores de sistemas. É um dos maiores projetos em Software Livre do mundo, sendo percursor na criação da incubadora de projetos da \textit{Apache Software foundation} \footnote{Incubadora de projetos Apache, disponível em \url{http://www.apache.org/}}. Tem sido desenvolvido desde o ano de 1995 e conta com uma comunidade extremamente ativa de colaboradores, provenientes de diferentes partes de todo o mundo.
+Como servidor \textit{Web}, foi escolhido o \textit{Apache} \cite{ApacheHttpd}, devido sua popularidade e uso amplamente difundido entre a comunidade de desenvolvedores e administradores de sistemas. É um dos maiores projetos em Software Livre do mundo, sendo percursor na criação da incubadora de projetos da \textit{Apache Software Foundation} \cite{ApacheSWFoundation}. Tem sido desenvolvido desde o ano de 1995 e conta com uma comunidade extremamente ativa de colaboradores, provenientes de diferentes partes de todo o mundo.
 
-Perante o mercado e às outras soluções de servidores \textit{Web}, o \textit{Apache} ocupa uma porção de uso correspondente a aproximadamente 47\%, segundo revelam as pesquisas \cite{Netcraft} disponibilizadas periodicamente pela companhia de serviços relacionados à \textit{Internet}, \textit{Netcraft} \footnote{Instituto de pesquisas em \textit{Internet Netcraft}, disponível em \url{http://netcraft.com/}}. A figura \ref{figura:utilizacao_webservers} mostra um gráfico percentual de utilização global das tecnologias em Webservers, confirmando o servidor \textit{Web Apache}, como sendo o mais amplamente adotado em sua categoria:
+Perante o mercado e às outras soluções de servidores \textit{Web}, o \textit{Apache} ocupa uma porção de uso correspondente a aproximadamente 47\%, segundo revelam as pesquisas \cite{Netcraft} disponibilizadas periodicamente pela companhia de serviços relacionados à \textit{Internet}, \textit{Netcraft}. A figura \ref{figura:utilizacao_webservers} mostra um gráfico percentual de utilização global das tecnologias em Webservers, confirmando o servidor \textit{Web Apache}, como sendo o mais amplamente adotado em sua categoria:
 
-\begin{figure}[h]
+\begin{figure}[H]
     \begin{center}
         \includegraphics[scale=0.8]{./figuras/overallc.png}
 
@@ -54,7 +50,7 @@ Perante o mercado e às outras soluções de servidores \textit{Web}, o \textit{
     \end{center}
 \end{figure}
 
-Sua integração com os Sistemas Operacionais baseados em famílias \textit{Unix} é suave, pois foi projetado para que se integre perfeitamente sob sua arquitetura. No momento de sua instalação, muitos sabores de distribuições baseadas no \textit{Kernel} \footnote{O \textit{Kernel}, trata-se do núcleo do Sistema Operacional. Entre outras funcionalidades, provê inúmeras camadas de abstração entre o \textit{hardware} e o \textit{software} empregados nos computadores.} do \textit{GNU/Linux} \footnote{O \textit{Kernel} do \textit{GNU/Linux} é disponbilizado no site do projeto, em \url{http://kernel.org/}}, por exemplo, incluem o \textit{Apache} como pacote opcional junto aos demais serviços de rede, sendo assim, uma alternativa bastante plausível de utilização, devido seu suporte praticamente nativo, além de não exigir grandes esforços em sua configuração, para que entre em ambiente de produção.
+Sua integração com os Sistemas Operacionais baseados em famílias \textit{Unix} é suave, pois foi projetado para que se integre perfeitamente sob sua arquitetura. No momento de sua instalação, muitos sabores de distribuições baseadas no \textit{Kernel} do \textit{GNU/Linux} \cite{LinuxKernel}, por exemplo, incluem o \textit{Apache} como pacote opcional junto aos demais serviços de rede, sendo assim, uma alternativa bastante plausível de utilização, devido seu suporte praticamente nativo, além de não exigir grandes esforços em sua configuração, para que entre em ambiente de produção.
 
 \subsection{Linguagem de Scripting}
 
@@ -62,9 +58,9 @@ Para que a ferramenta pudesse ser desenvolvida em ambiente \textit{Web}, foi def
 
 Sua concepção, assume que as linguagens de \textit{scripting}, não sejam utilizadas na construção de aplicações desde toda sua base, mas que reutilizem uma série de componentes e bibliotecas previamente implementadas, possivelmente em diferentes linguagens de programação, ou ainda que controlem outros \textit{softwares} através de chamadas específicas \cite{Scripting}. Por este motivo, são amplamente empregadas nos servidores \textit{Web}, que implementam todo o processo de receber requisições \textit{HTTP} de seus clientes e repassá-las para filtros especiais, podendo estes ser interpretadores de código, e que ainda no lado do servidor, possam responder aos clientes com conteúdo estatico ou dinâmico à tais requisições, de acordo com sua entrada aliada ao conjunto de estados mapeados pela aplicação requisitada.
 
-O servidor \textit{Web} \textit{Apache}, utiliza-se de módulos para suportar a integração com outras tecnologias, sendo que existem muitos que são implementados para suportar diversas linguagens de \textit{scripting}. O módulo mais difundido e bem suportado pelo \textit{Apache}, para este tipo de operação, é o \textit{mod\_php}, que provê acesso às funcionalidades que a linguagem de programação \textit{PHP} oferece. É distribuido juntamente aos pacotes binários e fontes do \textit{Apache}, sua configuração é praticamente nativa, não necessitando mais que pouquíssimas alterações no arquivo de configuração principal \footnote{Em instalações padrão, este arquivo é encontrado em \textit{/etc/httpd/httpd.conf}} do Apache, para que tal suporte esteja ativo.
+O servidor \textit{Web} \textit{Apache}, utiliza-se de módulos para suportar a integração com outras tecnologias, sendo que existem muitos que são implementados para suportar diversas linguagens de \textit{scripting}. O módulo mais difundido e bem suportado pelo \textit{Apache}, para este tipo de operação, é o \textit{mod\_php}, que provê acesso às funcionalidades que a linguagem de programação \textit{PHP} oferece. É distribuido juntamente aos pacotes binários e fontes do \textit{Apache}, sua configuração é praticamente nativa, não necessitando mais que pouquíssimas alterações no arquivo de configuração principal (\textit{/etc/httpd/httpd.conf}) do Apache, para que tal suporte esteja ativo.
 
-A figura \ref{figura:linguagens_programacao}, mostra um gráfico comparativo entre o uso das linguagens de programação, sendo que é notória a importância da linguagem de scripting \textit{PHP}, já que em sua categoria lidera em primeiro lugar no uso, frente aos seus maiores concorrentes: \textit{Ruby} \footnote{Linguagem de programação \textit{Ruby}, disponível em \url{http://ruby-lang.org}}, \textit{Pearl} \footnote{Linguagem de programação \textit{Pearl}, disponível em \url{http://perl.com/}} e \textit{Python} \footnote{Linguagem de programação \textit{Python}, disponível em \url{http://python.org/}}.
+A figura \ref{figura:linguagens_programacao}, mostra um gráfico comparativo entre o uso das linguagens de programação, sendo que é notória a importância da linguagem de scripting \textit{PHP}, já que em sua categoria lidera em primeiro lugar no uso, frente aos seus maiores concorrentes: \textit{Ruby} \cite{Ruby}, \textit{Pearl} \cite{Pearl} e \textit{Python} \cite{Python}.
 
 \clearpage
 \begin{figure}[h!tp]
@@ -87,7 +83,7 @@ Para o desenvolvimento de aplicações \textit{Web}, é amplamente utilizado o a
 
 Levando-se em considerações o conjunto de tecnologias envolvidas, optou-se pela utilização do \textit{framework CakePHP}. Essa decisão foi guiada após o estudo de outra tecnologia, proposta anteriormente ao início de seu desenvolvimento.
 
-Fora proposto no plano de estágio, a utilização da linguagem de programação \textit{Python}, em conjunto ao \textit{framework} de desenvolvimento \textit{Web Django \footnote{O framework de desenvolvimento \textit{Django}, proporciona o desenvolvimento rápido de aplicações \textit{Web}. Baseado na linguagem de programação \textit{Python}, segue o \textit{design pattern MVC} na organização dos sistemas desenvolvidos. Suporta uma grande diversidade de bancos de dados. Disponível em \url{http://djangoproject.com/}}}. No entanto, como requisito principal de funcionamento, tal framework necessita obrigatoriamente que seja instituído um processo que envolve modificações na hierarquia do Sistema Operacional, através de sua instalação. Isso nos remete à uma das características desejadas para a ferramenta \textit{Cricket's little leg}: que a portabilidade seja facilitada ao máximo, de acordo com o perfil mais comum entre ambientes de produção e desenvolvimento \textit{Web}. Como nem todos os sistemas administrados requerem que a linguagem de \textit{scripting Python} seja utilizada em conjunto ao ambiente \textit{Web} e, ainda sim, é incomum que nestes ambientes sejam empregadas tecnologias como \textit{Django}, optou-se pela substituição deste \textit{framework} por algum que seja tecnologicamente equivalente e que atenda ao requisito de portabilidade, desejado desde o início da concepção da ferramenta.
+Fora proposto no plano de estágio, a utilização da linguagem de programação \textit{Python}, em conjunto ao \textit{framework} de desenvolvimento \textit{Web Django} \cite{Django}, que basicamente, proporciona o desenvolvimento rápido de aplicações \textit{Web} seguindo o \textit{design pattern MVC} na organização dos sistemas desenvolvidos. No entanto, como requisito principal de funcionamento, tal framework necessita obrigatoriamente que seja instituído um processo que envolve modificações na hierarquia do Sistema Operacional, através de sua instalação. Isso nos remete à uma das características desejadas para a ferramenta \textit{Cricket's little leg}: que a portabilidade seja facilitada ao máximo, de acordo com o perfil mais comum entre ambientes de produção e desenvolvimento \textit{Web}. Como nem todos os sistemas administrados requerem que a linguagem de \textit{scripting Python} seja utilizada em conjunto ao ambiente \textit{Web} e, ainda sim, é incomum que nestes ambientes sejam empregadas tecnologias como \textit{Django}, optou-se pela substituição deste \textit{framework} por algum que seja tecnologicamente equivalente e que atenda ao requisito de portabilidade, desejado desde o início da concepção da ferramenta.
 
 O \textit{CakePHP} é um \textit{framework} que atende perfeitamente esta necessidade específica, sendo equivalente até mesmo em termos de arquitetura empregada na base do \textit{framework}. Tem como vantagem principal, relativa à portabilidade, de poder ser empacotado junto à aplicação desenvolvida, e desempacotado dentro do diretório que o \textit{Apache} utiliza para servir às requisições realizadas por seus clientes, sem que seja necessária a instalação de softwares adicionais para o seu pleno funcionamento em ambiente de produção.
 
@@ -133,7 +129,7 @@ Através dos ítens numerados, pode-se traçar um perfil padrão para todas as r
 \begin{enumerate}
     \item O cliente realiza a requisição.
 
-    \item O \textit{dispatcher} \footnote{O mecanismo chamado \textit{dispatcher}, permite que o processo de passagem de uma mensagem para uma sequência específica de código, ou método, seja realizado em tempo de execução.} verifica a \textit{URL} e seus dados, acionando uma chamada em um método de um objeto específico, instanciado como controlador.
+    \item O mecanismo chamado \textit{dispatcher}, permite que o processo de passagem de uma mensagem para uma sequência específica de código, ou método, seja realizado em tempo de execução. Verifica a \textit{URL} e seus dados, acionando uma chamada em um método de um objeto específico, instanciado como controlador.
 
     \item O controlador escolhido pelo \textit{dispatcher}, passa o fluxo de execução, para o modelo designado pela chamada recebida, com os dados necessários para sua execução, caso sejam necessários.
 
@@ -185,7 +181,7 @@ As características principais da ferramenta são compreendidas pelos ítens den
     \end{figure}
 
     \clearpage
-    \item Possibilidade de geração de regras de \textit{Iptables} \footnote{\textit{IPtables} é uma ferramenta que permite aos administradores de sistemas baseados em famílias \textit{Unix}, que configurem as tabelas de \textit{firewall} encontradas no \textit{Kernel} do Sistema Operacional.}, capazes de barrar ataques deste gênero, com base nos endereços de \textit{IP} pertencentes aos atacantes identificados pela interpretação dos registros contidos no arquivo de \textit{log}.
+    \item Possibilidade de geração de regras de \textit{Iptables}, capazes de barrar ataques deste gênero, com base nos endereços de \textit{IP} pertencentes aos atacantes identificados pela interpretação dos registros contidos no arquivo de \textit{log}.
 
     \begin{figure}[h!tp]
         \centering
@@ -207,11 +203,11 @@ Uma questão abordada durante a fase de idealização do projeto, era a capacida
 
 A ferramenta é capaz de localizar os países de onde partiram os ataques ao servidor analisado. Isso é possível graças à integração realizada entre a ferramenta e um \textit{Webservice} da família de ferramentas \textit{GeoIP}, específicas para esta tarefa.
 
-O acesso a tal \textit{Webservice}, se dá através do uso de um componente para o \textit{CakePHP} chamado \textit{GeoIPComponent} \footnote{O componente \textit{GeoIPComponent} para \textit{CakePHP} é disponibilizado em \url{http://github.com/kzhiwei/cakephp-geoip}.}, criado por \textit{Wayne Khan} e cuja licensa é a \textit{GNU Lesser General Public License}, mais conhecida como simplesmente \textit{LGPL}.
+O acesso a tal \textit{Webservice}, se dá através do uso de um componente para o \textit{CakePHP} chamado \textit{GeoIPComponent} \cite{GeoIPComponent}, criado por \textit{Wayne Khan} e cuja licensa é a \textit{LGPL}.
 
-O \textit{Webservice} é acessado por meio de uma \textit{API} publica, que fora integrada ao \textit{PHP}, sendo utilizada pelo componente \textit{GeoIPComponent}. Tal \textit{API} pública é, disponibilizada pela empresa \textit{MaxMind} \footnote{Site da empresa MaxMind: \url{http://www.maxmind.com/}.}.
+O \textit{Webservice} é acessado por meio de uma \textit{API} publica, que fora integrada ao \textit{PHP}, sendo utilizada pelo componente \textit{GeoIPComponent}. Tal \textit{API} pública é, disponibilizada pela empresa \textit{MaxMind} \cite{MaxMind}.
 
-Para cada entrada reconhecida no arquivo de logs, a ferramenta \textit{Cricket's Little Leg} dispara uma consulta à \textit{API} pública da \textit{MaxMind}, requisitando o código da região, relativo ao \textit{IP} informado, que no horário em que o ataque fora registrado, pertence obviamente, ao seu autor. A \textit{MaxMind}, dotada de um sistema específico para a identificação de \textit{IPs}, retorna o código de região. O código da região ao qual o endereço de \textit{IP} consultado pertence, é comparado com um banco de dados local de códigos de regiões \footnote{O banco de dados local de possíveis regiões, pode ser obtido em \url{http://geolite.maxmind.com/download/geoip/database/GeoLiteCountry/GeoIP.dat.gz}}, e então a sigla do país em questão é retornada, sendo assim possível interpretar satisfatoriamente o resultado desta busca, que é armazenado no banco de dados da ferramenta, para fins de exibição ao usuário em consultas posteriores.
+Para cada entrada reconhecida no arquivo de logs, a ferramenta \textit{Cricket's Little Leg} dispara uma consulta à \textit{API} pública da \textit{MaxMind}, requisitando o código da região, relativo ao \textit{IP} informado, que no horário em que o ataque fora registrado, pertence obviamente, ao seu autor. A \textit{MaxMind}, dotada de um sistema específico para a identificação de \textit{IPs}, retorna o código de região. O código da região ao qual o endereço de \textit{IP} consultado pertence, é comparado com um banco de dados local de códigos de regiões \cite{BDRegioes}, e então a sigla do país em questão é retornada, sendo assim possível interpretar satisfatoriamente o resultado desta busca, que é armazenado no banco de dados da ferramenta, para fins de exibição ao usuário em consultas posteriores.
 
 A figura \ref{figura:ws-geoip} ilustra todo esse processo, compreendido desde a identificação das entradas e a busca pelo país de origem de cada ataque identificado:
 
